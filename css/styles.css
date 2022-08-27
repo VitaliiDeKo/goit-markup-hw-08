@@ -1,0 +1,1166 @@
+html{
+  box-sizing: border-box;
+}
+p,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+margin: 0;
+}
+ul{
+  margin: 0;
+  padding-left: 0;
+  list-style: none;
+}
+button,
+textarea,
+input{
+  cursor: pointer;
+}
+address{
+  font-style: normal;
+}
+/*Встановив основний та резервний шрифти та фоновий колір для боди*/
+body{
+  margin: 0;
+  font-family: 'Roboto', sans-serif;
+  color: #212121;
+ }
+/*Прибрав підкреслювання з посилань*/
+.link{
+text-decoration: none
+}
+/*------------------Header---------------------*/
+/*Застилізував фон в Хедері*, верхній та нижній паддінги*/
+.page-header{
+  background-color: #FFFFFF;
+  border-bottom: 1px solid #ECECEC;
+}
+/*Поставив в строку три елементи списку в хедері*/
+.header-list-adress{
+  display: flex;
+  align-items: center;
+  padding-right: 0;
+}
+/*Задали флекс контейнеру в хедері та 
+вирівняли елементи вздовж осі*/
+.header-container{
+  display: flex;
+  align-items: center;
+  }
+.head-nav{
+  display: flex;
+  align-items: center;
+  }
+.header-list{
+  display: flex;
+  align-items: center;
+  padding-right: 318px;
+}
+/*Від списка до елемента в хедері задано верхні 
+та нижні паддінги та відцентровано флекс-елементи*/
+.header-list li,
+.header-list-adress li{
+text-align: center;
+}
+.header-link,
+.header-link-blue,
+.header-link-mail,
+.header-link-phone{
+  padding-top: 32px;
+  padding-bottom: 32px;
+
+  transition-property: color;
+  transition-duration: 250ms;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+}
+.header-link-blue{
+  position: relative;
+}
+.header-link-blue::after{
+  content: " ";
+  position: absolute;
+  display: block;
+  width: 100%;
+  height: 4px;
+  background: #2196F3;
+  border-radius: 2px;
+  top: 76px;
+  left: 0;
+  background-size: contain;
+  transform: translateY();
+}
+.header-list-adress .header-item,
+.header-list .header-item{
+  display: block;
+  }
+.header-list-adress .header-item:not(:last-child){
+margin-right: 30px;
+}
+.header-list .header-item:not(:last-child){
+margin-right: 50px;
+}
+/*Прибрав точки зі списку в Хедері*/
+.header-item{
+  list-style: none;
+  }
+.studio{
+  margin-left: 0;
+}
+/*Застилізував Лого, 
+встановив праві марджини та паддінг на логотип в футері на обох сторінках*/
+.logo,
+.logo-white,
+.logo-bleck {
+  margin-right: 0;
+  padding-right: 0;
+}
+.logo{
+  display: block;
+  font-family: 'Raleway';
+  font-weight: 700;
+  font-size: 26px;
+  line-height: 1.19.;
+  letter-spacing: 0.03em;
+  color: #2196F3;
+  padding-top: 0;
+  padding-bottom: 0;
+  margin-right: 0;
+  }
+  .logo-bleck{
+  color: #000000;
+  font-family: Raleway;
+  font-size: 26px;
+  line-height: 1.19;
+  letter-spacing: 0.03em;
+  margin-right: 0;
+
+  transition-property: color;
+  transition-duration: 250ms;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+  }
+.logo-white{
+  color: #FFFFFF;
+  font-family: Raleway;
+  font-size: 26px;
+  line-height: 1.19;
+  letter-spacing: 0.03em;
+
+  transition-property: color;
+  transition-duration: 250ms;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+  }
+  /*Добавив в Лого зміну кольору з використанням псевдокласів hover и focus*/
+.logo:hover,
+.logo:focus{
+  color: #2196F3;
+  }
+.logo-bleck:hover,
+.logo-bleck:focus{
+  color: #2196F3;
+  }
+.logo-white:hover,
+.logo-white:focus{
+  color: #2196F3;
+  }
+.top{
+  margin-right: 93px;
+  }
+  /*Добавив логотипу властивість hover і fokus у вигляді зміни кольору*/
+.header-link-blue:hover,
+.header-link-blue:focus{
+  color: #2196F3;
+  }
+.header-link:hover,
+.header-link:focus{
+  color: #2196F3;
+  }
+/*Застилізував Хедер посилання*/
+.header-link{
+  font-weight: 500;
+  font-size: 14px;
+  line-height: 1.14;
+  letter-spacing: 0.02em;
+  color: #212121;
+  }
+.header-link-blue{
+  font-weight: 500;
+  font-size: 14px;
+  line-height: 1.14;
+  letter-spacing: 0.02em;
+  color:  #2196F3;
+  }
+.header-link-mail{
+  display: flex;
+  font-weight: 500;
+  font-size: 14px;
+  line-height: 1.14;
+  letter-spacing: 0.02em;
+  color: #757575;
+  margin-left: 0;
+  align-items: center;
+  justify-content: center;
+  }
+.header-link-phone{
+  display: flex;
+  font-weight: 500;
+  font-size: 14px;
+  line-height: 1.14;
+  letter-spacing: 0.02em;
+  color: #757575;
+  align-items: center;
+  justify-content: center;
+}
+.header-mail{
+  font-weight: 500;
+  font-size: 14px;
+  line-height: 1.14;
+  letter-spacing: 0.02em;
+  color: #757575;
+}
+.header-icon {
+  margin-right: 10px;
+  fill: currentColor;
+}
+/*Добавив в мейл та телефон хедера властивість hover і fokus у вигляді зміни кольору*/
+.header-link-mail:hover,
+.header-link-mail:focus{
+color: #2196F3;
+}
+/*Визначив колір в ховері і в фокусі на посилання з номером телефону в хедері*/
+.header-link-phone:hover,
+.header-link-phone:focus{
+color: #2196F3;
+}
+/*Обгорнув хедер в контейнер задав початкові параметри, відцентрував посередині марджинами*/
+.container{
+width: 1200px;
+padding-left: 15px;
+padding-right: 15px;
+margin: 0 auto;
+}
+/*Застилізував фон в Хиро на сторінці Головна*/
+.hero{
+  display: block;
+  background-color: #303030;
+  background-image: 
+  linear-gradient(rgba(47, 48, 58, 0.4),
+      rgba(47, 48, 58, 0.4)),
+    url(../images/hero4.jpg);
+  background-repeat: no-repeat;
+  background-position: center;
+  text-align: center;
+  padding-top: 200px;
+  padding-bottom: 200px;
+  height: 600px;
+  max-width: 1600px;
+  background-size: cover;
+  margin-left: auto;
+  margin-right: auto;
+  position: relative;
+}
+/*!!!! максимальна ширина не визначена! 
+Застилізував заголовок h1 ,в Хиро*/
+.hero-title{
+display: block;
+font-weight: 900;
+font-size: 44px;
+line-height: 1.36;
+letter-spacing: 0.06em;
+color: #FFFFFF;
+margin-left: auto;
+margin-right: auto;
+margin-bottom: 30px;
+justify-content: center;
+width: 696px;
+}
+/*Застилізував кнопку Хіро на сторінці Головна*/
+.btn{
+  display: inline-block;
+  border-radius: 4px;
+  padding: 10px 32px;
+  font-weight: 700;
+  font-size: 16px;
+  line-height: 1.87;
+  letter-spacing: 0.06em;
+  color: #FFFFFF;
+  background-color:#2196F3;
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
+
+  transition-property: background-color, color;
+  transition-duration: 250ms;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+  }
+/*Добавив на кнопку Хиро властивість hover і fokus у вигляді зміни кольору*/
+.btn:hover,
+.btn:focus{
+background-color: #FFFFFF;
+color: #2196F3;
+}
+/*------Оформлення бекдропу та модального вікна------*/
+.backdrop{
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%; 
+  background-color: rgba(0, 0, 0, 0.2);
+  display: block;
+
+  transition-property: opacity, visibility;
+  transition-duration: 250ms;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+  }
+.modal{
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 528px;
+  min-height: 581px;
+  background: #FFFFFF;
+  box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14), 0px 2px 1px rgba(0, 0, 0, 0.2);
+  border-radius: 4px;
+  
+  transform: translate(-50%, -50%) scale(1) rotate(0);
+  transition: transform 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  padding: 40px;
+  }
+.is-hidden .modal{
+  transform: translate(-50%, -50%) scale(0.5) rotate(360deg);
+  }
+.modal-close{
+  position: absolute;
+  top: 8px;
+  right: 8px;
+
+  width: 30px;
+  height: 30px;
+  background: #FFFFFF;
+  border: 1px solid rgba(0, 0, 0, 0.1);
+  border-radius: 50%;
+  }
+.is-hidden{
+opacity: 0;
+/*прозрачний елемент робить чутливим до роботи з елементами під ним*/
+pointer-events: none;
+visibility: hidden;
+}
+.modal-close-icon{
+  position: absolute;
+  fill: #000000;
+  
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+
+  transition-property: fill;
+  transition-duration: 250ms;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+}
+.modal-close-icon:hover,
+.modal-close-icon:focus {
+  fill: #2196F3;
+}
+.modal-title{
+  font-weight: 700;
+  font-size: 20px;
+  line-height: 1.15;
+  text-align: center;
+  color: #212121;
+  margin-bottom: 12px;
+}
+/*---------Оформлення форми в модальному вікні-------*/
+.form-input{
+  padding-left: 42px;
+  box-sizing: border-box;
+  width: 100%;
+  height: 40px;
+  border: 1px solid rgba(33, 33, 33, 0.2);
+  border-radius: 4px;
+  font-weight: 400;
+  font-size: 12px;
+  line-height: 1.16;
+  color: #757575;
+}
+.form-input::placeholder{
+  font-weight: 400;
+  font-size: 12px;
+  line-height: 1.16;
+  color: #757575;
+}
+.form-input:focus{
+  outline-color: #2196F3;
+  }
+.form-input:focus + .input-icon{
+  fill: #2196F3;
+}
+.modal-text{
+font-weight: 400;
+font-size: 12px;
+line-height: 1.16;
+letter-spacing: 0.01em;
+color: rgba(117, 117, 117, 0.5);
+}
+.modal-text:focus{
+outline-color: #2196F3;
+}
+.check-text{
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 1.71;
+  letter-spacing: 0.03em;
+  color: #757575;
+  display: flex;
+  align-items: center;
+  }
+.check-text span{
+  width: 16px;
+  height: 15px;
+  border: 2px solid #212121;
+  border-radius: 3px;
+  display: flex;
+  margin-right: 7px;
+  justify-content: center;
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 1.71px;
+  letter-spacing: 0.03em;
+  color: #757575;
+
+  transition-property: background-color;
+  transition-duration: 250ms;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+}
+.check-link{
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 24px;
+  letter-spacing: 0.03em;
+  text-decoration-line: underline;
+  color: #2196F3;
+}
+.check-icon{
+  fill: transparent;
+
+  transition-property: fill;
+  transition-duration: 250ms;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+}
+.input-check:checked + .check-text span {
+  background-color: #2196F3;
+  border: none;
+}
+.input-check:focus + .check-text span {
+  border-color: #2196F3;
+}
+.input-check:checked + .check-text .check-icon{
+  fill: #FFFFFF;
+}
+.input-title{
+  font-weight: 400;
+  font-size: 12px;
+  line-height: 1.16;
+  color: #757575;
+  margin-bottom: 4px;
+  display: block;
+}
+.modal-text{
+  width: 100%;
+  height: 120px;
+  padding: 12px 16px;
+  margin-bottom: 20px;
+  border: 1px solid rgba(33, 33, 33, 0.2);
+  border-radius: 4px;
+  resize: none;
+  font-weight: 400;
+  font-size: 12px;
+  line-height: 1.16;
+  color: rgba(117, 117, 117, 0.5);
+  display: block;
+}
+.modal-form .input-field:not(:last-child){
+  margin-bottom: 10px;
+}
+.input-wrap{
+  position: relative;
+}
+.input-icon{
+  position: absolute;
+  top: 50%;
+  left: 12px;
+  transform: translateY(-50%);
+}
+.input-field-hidd{
+  margin-bottom: 30px;
+  margin-left: auto;
+  margin-right: auto;
+  width: 425px;
+}
+.batton-form{
+  font-weight: 700;
+  font-size: 16px;
+  line-height: 30px;
+  display: block;
+  margin: 0 auto;
+  align-items: center;
+  text-align: center;
+  letter-spacing: 0.06em;
+  color: #FFFFFF;
+  background: #2196F3;
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
+  border-radius: 4px;
+  padding: 10px 52px;
+  height: 50px;
+  width: 200px;
+
+  transition-property: color, background;
+  transition-duration: 250ms;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+  }
+.batton-form:hover,
+.batton-form:focus {
+  color: #2196F3;
+  background: #FFFFFF;
+}
+/*-----------------Advances-----------------*/
+.visually-hidden{
+  position: absolute !important;
+  clip: rect(1px 1px 1px 1px); /* IE6, IE7 */
+  clip: rect(1px, 1px, 1px, 1px);
+  padding:0 !important;
+  border:0 !important;
+  height: 1px !important;
+  width: 1px !important;
+  overflow: hidden; 
+}
+/*Застилізував фон розділу Наші переваги*/
+.advances{
+  padding-bottom: 94px;
+  padding-top: 94px;
+}
+/*Встановлено максимальну 
+ширину елементу списку, щоб не розповзався*/
+.advances-item{
+  max-width: 270px;
+
+}
+/*Застилізував заголовки h3 розділу Наші переваги*/
+.advances-title{
+  font-weight: 700;
+  font-size: 14px;
+  line-height: 1.14;
+  letter-spacing: 0.03em;
+  text-transform: uppercase;
+  color: #212121;
+  margin-bottom: 10px;
+  margin-top: 0;
+  }
+/*Застилізував текст p розділу Наші переваги*/
+.advances-text{
+  font-size: 14px;
+  line-height: 1.71;
+  letter-spacing: 0.03em;
+  color: #757575;
+  max-width: 270px;
+  }
+/*Прибрав крапки в розділі Наші переваги*/
+.advances-list{
+  list-style: none;
+  display: flex;
+  }
+.advances-list .advances-item:not(:last-child){
+  margin-right: 30px;
+  }
+  /*.advances-box{
+    display: flex;
+  }*/
+  .advances-box{
+    width: 270px;
+    height: 120px;
+    background-color: #F5F4FA;
+    margin-bottom: 30px;
+    justify-content: center;
+    align-items: center;
+    display: flex;
+    border-radius: 4px;
+    }
+    /*Відцентровано елементи, що розміщуються
+  посередині, зокрема Заголовок Чим ми займаємось*/
+  .centered {
+    text-align: center;
+  }
+  /*-----------------About----------------*/
+.about-title{
+  font-weight: 700;
+  font-size: 36px;
+  line-height: 1.16;
+  letter-spacing: 0.03em;
+  color: #212121;
+  margin-bottom: 50px;
+}
+/*Прибрав крапки та застилізував фон в розділі фото чим ми займаємось*/
+.about-list{
+  list-style: none;
+  display: flex;
+  }
+.about{
+  padding-bottom: 94px;
+  display: flex;
+  }
+.about-item{
+  display: flex;
+  position: relative;
+  }
+.about-list .about-item:not(:last-child) {
+  margin-right: 30px;
+  }
+  .about-box{
+    position: absolute;
+    display: inline-block;
+    width: 370px;
+    height: 70px;
+    background: rgba(47, 48, 58, 0.8);
+    bottom: 0;
+  }
+  .about-title-next{
+  position: absolute;
+  display: inline-block;
+  font-weight: 700;
+  font-size: 14px;
+  line-height: 1,14;
+  letter-spacing: 0.03em;
+  text-transform: uppercase;
+  color: #FFFFFF;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  }
+  /*---------------Team--------------*/
+.team{
+  padding-top: 94px;
+  padding-bottom: 94px;
+  display: flex;
+  background-color: #F5F4FA;
+  }
+/*Виставив в лінію Фото нашої команди*/
+.team-list{
+  display: flex;
+}
+/*Прибрав крапки у списку членів команди, та застилізував фон фото членів команди*/
+.team-item{
+  list-style: none;
+  display: block;
+  max-width: 270px;
+  box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14), 0px 2px 1px rgba(0, 0, 0, 0.2);
+  border-radius: 0px 0px 4px 4px;
+  background-color: #FFFFFF;
+}
+.team-list .team-item:not(:last-child){
+  margin-right: 30px;
+}
+/*Застилізував заголовки h2 та h3, що зверху та під фото членів команди*/
+.team-title-all{
+  font-weight: 700;
+  font-size: 36px;
+  line-height: 1.16;
+  letter-spacing: 0.03em;
+  color: #212121;
+  margin-bottom: 50px;
+}
+.team-title{
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 1.18;
+  letter-spacing: 0.03em;
+  color: #212121;
+  margin-bottom: 10px;
+}
+/*Застилізував тексти p, що під фото членів команди*/
+.team-text{
+  font-size: 16px;
+  line-height: 1.18;
+  letter-spacing: 0.03em;
+  color: #757575;
+  margin-bottom: 16px;
+  }
+.team-box{
+  padding-top: 30px;
+  padding-bottom: 30px;
+}
+/*Створюємо іконки соцмереж команди*/
+.team-link-soc{
+height: 44px;
+width: 44px;
+border-radius: 50%;
+display: flex;
+align-items: center;
+justify-content: center;
+
+transition-property: background-color, color, box-shadow, fill;
+transition-duration: 250ms;
+transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+}
+/*Встановлено властивості
+ зміни кольорів іконок в ховері і фокусі*/
+.team-link-soc:hover,
+.team-link-soc:focus{
+  background-color: #2196F3;
+  border-radius: 50%;
+  box-shadow: 0px 4px 4px 0px #00000040;
+}
+/*Одночасно зміюється колір при
+ ховері та фокусі на посиланні та іконці */
+.team-link-soc:hover .team-soc-icon,
+.team-link-soc:focus .team-soc-icon{
+  fill: #FFFFFF;
+}
+/*Списку задано флекс, списрок виставлено
+по центру, встановлено відстань між Li 10px*/
+.team-soc{
+  display: flex;
+  justify-content: center;
+  gap: 10px;
+}
+/*Встановлено колір іконок*/
+.team-soc-icon{
+fill: #AFB1B8;
+
+transition-property: background-color, color, box-shadow, fill;
+transition-duration: 250ms;
+transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+/*---------------Button Portfolio---------------*/
+
+/*Застилізував блок з 5 кнопок в розділі Портфоліо,
+вирівняв текст в кнопках, зробив кнопки блочними елементами,
+ */
+.but-projects{
+  padding: 94px 0;
+  }
+  .button{
+  display: inline-block;
+  padding: 6px 22px;
+  font-family: 'Roboto';
+  font-size: 16px;
+  font-weight: 500;
+  line-height: 1.62;
+  text-align: center;
+  letter-spacing: 0.03em;
+  color: #212121;
+  background: #F5F4FA;
+  border-radius: 4px;
+  
+  transition-property: background-color, color;
+  transition-duration: 250ms;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+  }
+/*Прибрав крапки з Li в розділі з 5 кнопками в Портфоліо*/
+.button-list{
+  list-style: none;
+  margin-bottom: 55px;
+  align-items: flex-start;
+  display: flex;
+  justify-content: center;
+  }
+.button-list .button-item:not(:last-child){
+  margin-right: 8px;
+}
+.menu.center{
+justify-content: center;
+}
+.button-container{
+  display: block;
+}
+/*Добавив на 5 кнопок з Портфоліо властивість hover і fokus у вигляді зміни кольору*/
+.button:hover,
+.button:focus{
+  color: #FFFFFF;
+  background: #2196F3;
+  box-shadow: 0px 3px 1px rgba(0, 0, 0, 0.1), 0px 1px 2px rgba(0, 0, 0, 0.08), 0px 2px 2px rgba(0, 0, 0, 0.12);
+}
+/*Застилізував колір навколо 5 кнопок, фон*/
+.button-item{
+  background-color: #F5F5F5;
+  display: inline-block;
+  }
+
+/*-------------------Projects-------------------*/
+
+.projects-top{
+position: relative;
+overflow: hidden;
+display: block;
+object-fit: fill;
+}
+.projects-top-text{
+  position: absolute;
+  width: 370px;
+  height: 294px;
+  left: 0;
+  top: 0;
+  font-weight: 400;
+  font-size: 18px;
+  line-height: 1.55;
+  letter-spacing: 0.03em;
+  color: #FFFFFF;
+  background: rgba(33, 150, 243, 0.9);
+  padding: 63px 24px;
+
+  transform: translateY(100%);
+  
+  transition-property: transform;
+  transition-duration: 250ms;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+  }
+/*Застилізував заголовки H2 в розділі 9 проектів Портфоліо*/
+.projects-title{
+font-family: 'Roboto';
+font-weight: 700;
+font-size: 18px;
+line-height: 2.00;
+letter-spacing: 0.06em;
+color: #212121;
+margin-bottom: 4px;
+}
+/*Застилізував текст в розділі 9 проектів Портфоліо*/
+.projects-text{
+  font-family: 'Roboto';
+  font-style: normal;
+  font-size: 16px;
+  line-height: 1.87;
+  letter-spacing: 0.03em;
+  color: #757575;
+  }
+/*Застилізував фон навколо 9 посилань Портфоліо*/
+.projects-list{
+  list-style: none;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 30px;
+}
+.projects-item,
+.projects-link{
+  display: block;
+}
+.projects-item{
+  display: block;
+  transition-property: box-shadow;
+  transition-duration: 250ms;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+}
+.projects-item:hover .projects-top-text{
+  transform: translateY(0);
+}
+/*Добавив ефект тіні в ховері та фокусі на Li*/
+.projects-item:hover,
+.projects-item:focus{
+box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.12), 0px 4px 4px rgba(0, 0, 0, 0.06), 1px 4px 6px rgba(0, 0, 0, 0.16);
+}
+/*Застилізував рамкою текст під фото*/
+.borders{
+  display: block;
+  border-bottom: 1px solid #EEEEEE;
+  border-left: 1px solid #EEEEEE;
+  border-right: 1px solid #EEEEEE;
+  padding-top: 20px;
+  padding-bottom: 20px;
+  padding-left: 24px;
+  }
+  img{
+    display: block;
+    max-width: 100%;
+    height: auto;
+  }
+.clients{
+  padding-top: 94px;
+  padding-bottom: 94px;
+}
+/*.container-clients{
+  display: flex;
+}*/
+.client-title-all{
+  font-weight: 700;
+  font-size: 36px;
+  line-height: 1.16;
+  text-align: center;
+  letter-spacing: 0.03em;
+  color: #212121;
+  margin-bottom: 50px;
+}
+.client-list{
+  display: flex;
+  gap: 30px;
+  justify-content: center;
+  max-width: 1170px;
+  margin: 0;
+  padding-left: 0;
+}
+.client-item{
+  display: flex;
+}
+.client-link{
+width: 170px;
+height: 92px;
+border: 1px solid #AFB1B8;
+justify-content: center;
+align-items: center;
+border-radius: 4px;
+display: flex;
+
+transition-property: border, fill;
+transition-duration: 250ms;
+transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+}
+.client-icon{
+  fill: #AFB1B8; 
+
+  transition-property: border, fill;
+  transition-duration: 250ms;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+}
+/*Встановлено властивості
+зміни кольорів іконок в ховері і фокусі*/
+.client-link:hover,
+.client-link:focus {
+  border: 1px solid #2196F3;
+  
+}
+
+/*Одночасно зміюється колір при
+ ховері та фокусі на посиланні та іконці */
+.client-link:hover .client-icon,
+.client-link:focus .client-icon {
+  fill: #2196F3;
+}
+/*--------------------------Футер--------------------------*/
+/*Застилізував фон футера
+встановив верхній та нижній паддінги*/
+.footer{
+  background-color: #2F303A;
+  padding-top: 60px;
+  padding-bottom: 60px;
+  }
+  .footer-conteiner{
+    display: flex;
+  }
+  .footer-logo-address{
+    width: 231px;
+    margin-right: 70px;
+  }
+  /*Прибрав властивість Italic в адресі Футера*/
+.footer-adress{
+  font-style: normal;
+}
+/*Прибрав крапки зі списку Футера*/
+.footer-list{
+  list-style: none;
+}
+/*Застилізував адресу у Футері*/
+.footer-link-adress{
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 1.71;
+  letter-spacing: 0.03em;
+  color: #FFFFFF;
+
+  transition-property: color;
+  transition-duration: 250ms;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+  }
+
+/*Добавив на футер на посилання властивість hover і fokus у вигляді зміни кольору*/
+.footer-link-adress:hover,
+.footer-link-adress:focus{
+  color: #2196F3;
+  }
+.footer-link-mail:hover,
+.footer-link-mail:focus{
+  color: #2196F3;
+  }
+.footer-link-phone:hover,
+.footer-link-phone:focus{
+  color: #2196F3;
+ }
+/*Застилізував електронку та телефон у Футері*/
+.footer-link-mail{
+  font-family:'Roboto';
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 1.71;
+  color: rgba(255, 255, 255, 0.6);
+
+  transition-property: color;
+  transition-duration: 250ms;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+  }
+.footer-link-phone{
+  font-family:'Roboto';
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 1.71;
+  letter-spacing: 0.03em;
+  color: rgba(255, 255, 255, 0.6);
+
+  transition-property: color;
+  transition-duration: 250ms;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+  }
+/*Встановив праві марджини та паддінг на логотип в футері на обох сторінках*/
+
+/*Встановив нижній паддінг на самому нижньому елементі в футері
+та зробив Li елементи футерів блоковими*/
+.link-phone{
+  padding-bottom: 0;
+  }
+.footer-item{
+display: block;
+}
+.logfut{
+  margin-bottom: 20px;
+}
+/*Встановив паддінг списку Li в футері
+за виключенням останнього елемента last-child*/
+.logo-address{
+  margin-right: 70px;
+}
+.footer-list .footer-item:not(:last-child){
+padding-bottom: 9px;
+}
+.footer-soc-list{
+  display: flex;
+  gap: 10px;
+}
+.footer-link-soc{
+  height: 44px;
+  width: 44px;
+  border-radius: 50%;
+  display: flex;
+  background-color: rgba(255, 255, 255, 0.1);
+  align-items: center;
+  justify-content: center;
+
+  transition-property: background-color, box-shadow;
+  transition-duration: 250ms;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+/*Встановлено властивості
+зміни кольорів іконок в ховері і фокусі*/
+.footer-link-soc:hover,
+.footer-link-soc:focus{
+  background-color: #2196F3;
+  box-shadow: 0px 4px 4px 0px #00000040;
+}
+.footer-link-soc:hover .footer-soc-icon,
+.footer-link-soc:focus .footer-soc-icon {
+  fill: #FFFFFF;
+}
+.footer-soc-text{
+  font-weight: 700;
+  font-size: 14px;
+  line-height: 1.14;
+  letter-spacing: 0.03em;
+  text-transform: uppercase;
+  color: #FFFFFF;
+  margin-bottom: 20px;
+}
+.footer-soc-icon {
+  fill: #FFFFFF;
+
+  transition-property: fill;
+  transition-duration: 250ms;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+}
+.footer-join{
+  margin-top: 12px;
+  margin-left: 0;
+  margin-right: 93px;
+}
+/*----------------------Форма в футері---------------------*/
+.footer-post {
+  display: block;
+  margin-top: 12px;
+}
+.footer-form{
+  display: flex;
+}
+.footer-wrap {
+  position: relative;
+}
+.footer-btn{
+  width: 200px;
+  height: 50px;
+  background: #2196F3;
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
+  border-radius: 4px;
+  padding: 10px 28px;
+  font-weight: 700;
+  font-size: 16px;
+  line-height: 1.87;
+  align-items: center;
+  text-align: justify;
+  color: #FFFFFF;
+  letter-spacing: 0.06em;
+
+  transition-property: color, background;
+  transition-duration: 250ms;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+  }
+.footer-btn:hover,
+.footer-btn:focus {
+  background-color: #FFFFFF;
+  color: #2196F3;
+}
+.footer-btn:hover .fut-input-icon,
+.footer-btn:focus .fut-input-icon{
+  fill: #2196F3;
+}
+.fut-input-icon{
+position: absolute;
+top: 50%;
+right: 28px;
+transform: translateY(-40%);
+fill: #FFFFFF;
+}
+
+.footer-text-form{
+  font-weight: 700;
+  font-size: 14px;
+  line-height: 1.14;
+  color: #FFFFFF;
+  margin-bottom: 20px;
+}
+.footer-input{
+  margin-right: 12px;
+  background: #2F303A;
+  border: 1px solid rgba(255, 255, 255, 0.3);
+  filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.15));
+  border-radius: 4px;
+  width: 358px;
+  height: 50px;
+  font-weight: 700;
+  font-size: 16px;
+  line-height: 1.87;
+  color: #FFFFFF;
+  padding-left: 20px;
+  
+}
+.footer-input::placeholder {
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 1.25;
+  display: flex;
+  align-items: center;
+  color: rgba(255, 255, 255, 0.6);
+  padding-left: 16px;
+ }
+
+
+
+
+
+
