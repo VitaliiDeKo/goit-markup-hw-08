@@ -1,0 +1,28 @@
+.but-projects {
+  padding: 94px 0;
+}
+/*Прибрав крапки з Li в розділі з 5 кнопками в Портфоліо*/
+.button-list {
+  list-style: none;
+  margin-bottom: 55px;
+  align-items: flex-start;
+  display: flex;
+  justify-content: center;
+}
+
+
+.menu.center {
+  justify-content: center;
+}
+
+.button-container {
+  display: block;
+}
+/*Застилізував колір навколо 5 кнопок, фон*/
+.button-item {
+  background-color: var(--second-bgc);
+  display: inline-block;
+  .button-list &:not(:last-child) {
+      margin-right: 8px;
+    }
+}

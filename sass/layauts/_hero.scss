@@ -1,0 +1,33 @@
+.hero {
+  display: block;
+  background-color: #303030;
+  background-image:
+    linear-gradient(rgba(47, 48, 58, 0.4),
+      rgba(47, 48, 58, 0.4)),
+    url(../images/hero4.jpg);
+  background-repeat: no-repeat;
+  background-position: center;
+  text-align: center;
+  padding-top: 200px;
+  padding-bottom: 200px;
+  height: 600px;
+  max-width: 1600px;
+  background-size: cover;
+  margin-left: auto;
+  margin-right: auto;
+  position: relative;
+}
+/*Застилізував заголовок h1 ,в Хиро*/
+.hero-title {
+  display: block;
+  font-weight: 900;
+  font-size: 44px;
+  line-height: 1.36;
+  letter-spacing: 0.06em;
+  color: var(--white-color-text);
+  margin-left: auto;
+  margin-right: auto;
+  margin-bottom: 30px;
+  justify-content: center;
+  width: 696px;
+}

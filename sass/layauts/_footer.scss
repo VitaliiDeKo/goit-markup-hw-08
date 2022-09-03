@@ -1,0 +1,160 @@
+.footer {
+  background-color: var(--darc-bgc);
+  padding-top: 60px;
+  padding-bottom: 60px;
+}
+
+.footer-conteiner {
+  display: flex;
+}
+
+.footer-logo-address {
+  width: 231px;
+  margin-right: 70px;
+}
+
+/*Прибрав властивість Italic в адресі Футера*/
+.footer-adress {
+  font-style: normal;
+}
+
+/*Прибрав крапки зі списку Футера*/
+.footer-list {
+  list-style: none;
+}
+
+/*Застилізував адресу у Футері*/
+.footer-link-adress {
+  font-weight: var(--weight-two);
+  font-size: var(--low-size);
+  line-height: 1.71;
+  letter-spacing: 0.03em;
+  color: var(--white-color-text);
+
+  transition-property: color;
+  transition-duration: 250ms;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+
+  &:hover,
+  &:focus {
+    color: var(--accent);
+  }
+}
+
+/*Застилізував електронку та телефон у Футері*/
+.footer-link-mail {
+  font-family: 'Roboto';
+  font-weight: var(--weight-two);
+  font-size: var(--low-size);
+  line-height: 1.71;
+  color: var(--placehold-color);
+
+  transition-property: color;
+  transition-duration: 250ms;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+
+  &:hover,
+  &:focus {
+    color: var(--accent);
+  }
+}
+
+.footer-link-phone {
+  font-family: 'Roboto';
+  font-weight: var(--weight-two);
+  font-size: var(--low-size);
+  line-height: 1.71;
+  letter-spacing: 0.03em;
+  color: var(--placehold-color);
+
+  transition-property: color;
+  transition-duration: 250ms;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+
+  &:hover,
+  &:focus {
+    color: var(--accent);
+  }
+}
+
+/*Встановив праві марджини та паддінг на логотип в футері на обох сторінках*/
+
+/*Встановив нижній паддінг на самому нижньому елементі в футері
+та зробив Li елементи футерів блоковими*/
+.link-phone {
+  padding-bottom: 0;
+}
+
+.footer-item {
+  display: block;
+}
+
+.logfut {
+  margin-bottom: 20px;
+}
+
+/*Встановив паддінг списку Li в футері
+за виключенням останнього елемента last-child*/
+.logo-address {
+  margin-right: 70px;
+}
+
+.footer-list .footer-item:not(:last-child) {
+  padding-bottom: 9px;
+}
+
+.footer-soc-list {
+  display: flex;
+  gap: 10px;
+}
+
+.footer-link-soc {
+  height: 44px;
+  width: 44px;
+  border-radius: 50%;
+  display: flex;
+  background-color: rgba(255, 255, 255, 0.1);
+  align-items: center;
+  justify-content: center;
+
+  transition-property: background-color, box-shadow;
+  transition-duration: 250ms;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+/*Встановлено властивості
+зміни кольорів іконок в ховері і фокусі*/
+.footer-link-soc:hover,
+.footer-link-soc:focus {
+  background-color: var(--accent);
+  box-shadow: 0px 4px 4px 0px #00000040;
+}
+
+.footer-link-soc:hover .footer-soc-icon,
+.footer-link-soc:focus .footer-soc-icon {
+  fill: var(--white-color-text);
+}
+
+.footer-soc-text {
+  font-weight: var(--weight-one);
+  font-size: var(--low-size);
+  line-height: 1.14;
+  letter-spacing: 0.03em;
+  text-transform: uppercase;
+  color: var(--white-color-text);
+  margin-bottom: 20px;
+}
+
+.footer-soc-icon {
+  fill: var(--white-color-text);
+
+  transition-property: fill;
+  transition-duration: 250ms;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.footer-join {
+  margin-top: 12px;
+  margin-left: 0;
+  margin-right: 93px;
+}

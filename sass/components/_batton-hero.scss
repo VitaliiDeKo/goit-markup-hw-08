@@ -1,0 +1,22 @@
+.btn {
+  display: inline-block;
+  border-radius: 4px;
+  padding: 10px 32px;
+  font-weight: var(--weight-one);
+  font-size: var(--king-size);
+  line-height: 1.87;
+  letter-spacing: 0.06em;
+  color: var(--white-color-text);
+  background-color: var(--accent);
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
+
+  transition-property: background-color, color;
+  transition-duration: 250ms;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+  
+  &:hover,
+  &:focus {
+    background-color: var(--white-color-text);
+    color: var(--accent);
+}
+}

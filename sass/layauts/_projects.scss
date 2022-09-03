@@ -1,0 +1,95 @@
+.projects-top {
+  position: relative;
+  overflow: hidden;
+  display: block;
+  object-fit: fill;
+}
+
+.projects-top-text {
+  position: absolute;
+  width: 370px;
+  height: 294px;
+  left: 0;
+  top: 0;
+  font-weight: var(--weight-two);
+  font-size: 18px;
+  line-height: 1.55;
+  letter-spacing: 0.03em;
+  color: var(--white-color-text);
+  background: rgba(33, 150, 243, 0.9);
+  padding: 63px 24px;
+
+  transform: translateY(100%);
+
+  transition-property: transform;
+  transition-duration: 250ms;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+
+  .projects-item:hover & {
+      transform: translateY(0);
+    }
+}
+
+/*Застилізував заголовки H2 в розділі 9 проектів Портфоліо*/
+.projects-title {
+  font-family: 'Roboto';
+  font-weight: var(--weight-one);
+  font-size: 18px;
+  line-height: 2.00;
+  letter-spacing: 0.06em;
+  color: var(--color-h);
+  margin-bottom: 4px;
+}
+
+/*Застилізував текст в розділі 9 проектів Портфоліо*/
+.projects-text {
+  font-family: 'Roboto';
+  font-style: normal;
+  font-size: 16px;
+  line-height: 1.87;
+  letter-spacing: 0.03em;
+  color: var(--color-text);
+}
+
+/*Застилізував фон навколо 9 посилань Портфоліо*/
+.projects-list {
+  list-style: none;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 30px;
+}
+
+.projects-item,
+.projects-link {
+  display: block;
+}
+
+.projects-item {
+  display: block;
+
+  transition-property: box-shadow;
+  transition-duration: 250ms;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+
+  &:hover,
+  &:focus {
+    box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.12), 0px 4px 4px rgba(0, 0, 0, 0.06), 1px 4px 6px rgba(0, 0, 0, 0.16);
+  }
+}
+
+/*Застилізував рамкою текст під фото*/
+.borders {
+  display: block;
+  border-bottom: 1px solid #EEEEEE;
+  border-left: 1px solid #EEEEEE;
+  border-right: 1px solid #EEEEEE;
+  padding-top: 20px;
+  padding-bottom: 20px;
+  padding-left: 24px;
+}
+
+img {
+  display: block;
+  max-width: 100%;
+  height: auto;
+}

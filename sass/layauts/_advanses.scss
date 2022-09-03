@@ -1,0 +1,56 @@
+/*Застилізував фон розділу Наші переваги*/
+.advances {
+  padding-bottom: 94px;
+  padding-top: 94px;
+}
+
+/*Встановлено максимальну 
+ширину елементу списку, щоб не розповзався*/
+.advances-item {
+  max-width: 270px;
+
+  .advances-list &:not(:last-child) {
+    margin-right: 30px;
+  }
+}
+
+.advances-title {
+  font-weight: 700;
+  font-size: var(--low-size);
+  line-height: 1.14;
+  letter-spacing: 0.03em;
+  text-transform: uppercase;
+  color: var(--color-h);
+  margin-bottom: 10px;
+  margin-top: 0;
+}
+
+.advances-text {
+  font-size: var(--low-size);
+  line-height: 1.71;
+  letter-spacing: 0.03em;
+  color: var(--color-text);
+  max-width: 270px;
+}
+
+.advances-list {
+  list-style: none;
+  display: flex;
+}
+
+.advances-box {
+  width: 270px;
+  height: 120px;
+  background-color: var(--third-bgc-color);
+  margin-bottom: 30px;
+  justify-content: center;
+  align-items: center;
+  display: flex;
+  border-radius: 4px;
+}
+
+/*Відцентровано елементи, що розміщуються
+  посередині, зокрема Заголовок Чим ми займаємось*/
+.centered {
+  text-align: center;
+}
