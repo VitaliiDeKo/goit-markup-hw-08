@@ -80,7 +80,7 @@ body {
 
 .page-header {
   background-color: var(--white-color-text);
-  border-bottom: 1px solid #ECECEC;
+  border-bottom: 1px solid #ececec;
 }
 
 .header-container {
@@ -88,18 +88,18 @@ body {
 }
 
 /*Поставив в строку три елементи списку в хедері*/
-.header-list-adress {
+.list-adress {
   display: flex;
   align-items: center;
   padding-right: 0;
 }
-.header-list-adress .header-item:not(:last-child) {
+.list-adress .list-adress__item:not(:last-child) {
   margin-right: 30px;
 }
 
 /*Задали флекс контейнеру в хедері та 
 вирівняли елементи вздовж осі*/
-.head-nav {
+.navigation {
   display: flex;
   align-items: center;
 }
@@ -109,14 +109,14 @@ body {
   align-items: center;
   padding-right: 318px;
 }
-.header-list .header-item:not(:last-child) {
+.header-list .header-list__item:not(:last-child) {
   margin-right: 50px;
 }
 
-.header-link,
-.header-link-blue,
-.header-link-mail,
-.header-link-phone {
+.header-list__link,
+.header-list__link-blue,
+.list-adress__link-mail,
+.list-adress__link-phone {
   padding-top: 32px;
   padding-bottom: 32px;
   transition-property: color;
@@ -124,10 +124,10 @@ body {
   transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 }
 
-.header-link-blue {
+.header-list__link-blue {
   position: relative;
 }
-.header-link-blue::after {
+.header-list__link-blue::after {
   content: " ";
   position: absolute;
   display: block;
@@ -141,16 +141,16 @@ body {
   transform: translateY();
 }
 
-.header-list-adress .header-item,
-.header-list .header-item {
+.list-adress .list-adress__item,
+.header-list .header-list__item {
   display: block;
 }
 
 /*Прибрав точки зі списку в Хедері*/
-.header-item {
+.header-list__item {
   list-style: none;
 }
-.header-list .header-item, .header-list-adress .header-item {
+.header-list .header-list__item, .list-adress .header-list__item {
   text-align: center;
 }
 
@@ -162,7 +162,7 @@ body {
 встановив праві марджини та паддінг на логотип в футері на обох сторінках*/
 .logo,
 .logo-white,
-.logo-bleck {
+.logo__logo-bleck {
   margin-right: 0;
   padding-right: 0;
 }
@@ -177,12 +177,13 @@ body {
   padding-top: 0;
   padding-bottom: 0;
   margin-right: 0;
+  text-decoration: none;
 }
 .logo:hover, .logo:focus {
   color: var(--accent);
 }
 
-.logo-bleck {
+.logo__logo-bleck {
   color: var(--logo-color);
   font-family: Raleway;
   font-size: var(--head-size);
@@ -193,7 +194,7 @@ body {
   transition-duration: 250ms;
   transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 }
-.logo-bleck:hover, .logo-bleck:focus {
+.logo__logo-bleck:hover, .logo__logo-bleck:focus {
   color: var(--accent);
 }
 
@@ -211,34 +212,34 @@ body {
   color: var(--accent);
 }
 
-.top {
+.logo-top {
   margin-right: 93px;
 }
 
 /*Застилізував Хедер посилання*/
-.header-link {
+.header-list__link {
   font-weight: var(--weight-three);
   font-size: var(--low-size);
   line-height: 1.14;
   letter-spacing: 0.02em;
   color: var(--color-h);
 }
-.header-link:hover, .header-link:focus {
+.header-list__link:hover, .header-list__link:focus {
   color: var(--accent);
 }
 
-.header-link-blue {
+.header-list__link-blue {
   font-weight: var(--weight-three);
   font-size: var(--low-size);
   line-height: 1.14;
   letter-spacing: 0.02em;
   color: var(--accent);
 }
-.header-link-blue:hover, .header-link-blue:focus {
+.header-list__link-blue:hover, .header-list__link-blue:focus {
   color: var(--accent);
 }
 
-.header-link-mail {
+.list-adress__link-mail {
   display: flex;
   font-weight: var(--weight-three);
   font-size: var(--low-size);
@@ -249,11 +250,11 @@ body {
   align-items: center;
   justify-content: center;
 }
-.header-link-mail:hover, .header-link-mail:focus {
+.list-adress__link-mail:hover, .list-adress__link-mail:focus {
   color: var(--accent);
 }
 
-.header-link-phone {
+.list-adress__link-phone {
   display: flex;
   font-weight: var(--weight-three);
   font-size: var(--low-size);
@@ -263,7 +264,7 @@ body {
   align-items: center;
   justify-content: center;
 }
-.header-link-phone:hover, .header-link-phone:focus {
+.list-adress__link-phone:hover, .list-adress__link-phone:focus {
   color: var(--accent);
 }
 
@@ -275,13 +276,9 @@ body {
   color: var(--color-text);
 }
 
-.header-icon {
+.list-adress__icon {
   margin-right: 10px;
   fill: currentColor;
-}
-
-.header-container {
-  display: flex;
 }
 
 .hero {
@@ -579,7 +576,7 @@ body {
 }
 
 /*Прибрав крапки з Li в розділі з 5 кнопками в Портфоліо*/
-.button-list {
+.but-projects__list {
   list-style: none;
   margin-bottom: 55px;
   align-items: flex-start;
@@ -591,20 +588,19 @@ body {
   justify-content: center;
 }
 
-.button-container {
+/*.button-container {
   display: block;
-}
-
+}*/
 /*Застилізував колір навколо 5 кнопок, фон*/
-.button-item {
+.but-projects__item {
   background-color: var(--second-bgc);
   display: inline-block;
 }
-.button-list .button-item:not(:last-child) {
+.but-projects__list .but-projects__item:not(:last-child) {
   margin-right: 8px;
 }
 
-.projects-top {
+.projects-list__top {
   position: relative;
   overflow: hidden;
   display: block;
@@ -612,7 +608,7 @@ body {
      object-fit: fill;
 }
 
-.projects-top-text {
+.projects-list__top-text {
   position: absolute;
   width: 370px;
   height: 294px;
@@ -630,12 +626,16 @@ body {
   transition-duration: 250ms;
   transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 }
-.projects-item:hover .projects-top-text {
+.projects-list__item:hover .projects-list__top-text {
+  transform: translateY(0);
+}
+
+.projects-list__item:hover .projects-list__top-text {
   transform: translateY(0);
 }
 
 /*Застилізував заголовки H2 в розділі 9 проектів Портфоліо*/
-.projects-title {
+.projects-list__title {
   font-family: "Roboto";
   font-weight: var(--weight-one);
   font-size: 18px;
@@ -646,7 +646,7 @@ body {
 }
 
 /*Застилізував текст в розділі 9 проектів Портфоліо*/
-.projects-text {
+.projects-list__text {
   font-family: "Roboto";
   font-style: normal;
   font-size: 16px;
@@ -663,27 +663,27 @@ body {
   gap: 30px;
 }
 
-.projects-item,
-.projects-link {
+/*.projects-list__item,*/
+.projects-list__link {
   display: block;
 }
 
-.projects-item {
+.projects-list__item {
   display: block;
   transition-property: box-shadow;
   transition-duration: 250ms;
   transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 }
-.projects-item:hover, .projects-item:focus {
+.projects-list__item:hover, .projects-list__item:focus {
   box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.12), 0px 4px 4px rgba(0, 0, 0, 0.06), 1px 4px 6px rgba(0, 0, 0, 0.16);
 }
 
 /*Застилізував рамкою текст під фото*/
-.borders {
+.projects-list__borders {
   display: block;
-  border-bottom: 1px solid #EEEEEE;
-  border-left: 1px solid #EEEEEE;
-  border-right: 1px solid #EEEEEE;
+  border-bottom: 1px solid #eeeeee;
+  border-left: 1px solid #eeeeee;
+  border-right: 1px solid #eeeeee;
   padding-top: 20px;
   padding-bottom: 20px;
   padding-left: 24px;
@@ -1143,7 +1143,7 @@ img {
   color: var(--accent);
 }
 
-.button {
+.but-projects__button {
   display: inline-block;
   padding: 6px 22px;
   font-family: "Roboto";
@@ -1159,7 +1159,7 @@ img {
   transition-duration: 250ms;
   transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 }
-.button:hover, .button:focus {
+.but-projects__button:hover, .but-projects__button:focus {
   color: var(--white-color-text);
   background: var(--accent);
   box-shadow: 0px 3px 1px rgba(0, 0, 0, 0.1), 0px 1px 2px rgba(0, 0, 0, 0.08), 0px 2px 2px rgba(0, 0, 0, 0.12);

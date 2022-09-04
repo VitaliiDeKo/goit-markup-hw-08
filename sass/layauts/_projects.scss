@@ -1,11 +1,11 @@
-.projects-top {
+.projects-list__top {
   position: relative;
   overflow: hidden;
   display: block;
   object-fit: fill;
 }
 
-.projects-top-text {
+.projects-list__top-text {
   position: absolute;
   width: 370px;
   height: 294px;
@@ -25,24 +25,26 @@
   transition-duration: 250ms;
   transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 
-  .projects-item:hover & {
-      transform: translateY(0);
-    }
+  .projects-list__item:hover & {
+    transform: translateY(0);
+  }
 }
-
+.projects-list__item:hover .projects-list__top-text {
+  transform: translateY(0);
+}
 /*Застилізував заголовки H2 в розділі 9 проектів Портфоліо*/
-.projects-title {
+.projects-list__title {
   font-family: 'Roboto';
   font-weight: var(--weight-one);
   font-size: 18px;
-  line-height: 2.00;
+  line-height: 2;
   letter-spacing: 0.06em;
   color: var(--color-h);
   margin-bottom: 4px;
 }
 
 /*Застилізував текст в розділі 9 проектів Портфоліо*/
-.projects-text {
+.projects-list__text {
   font-family: 'Roboto';
   font-style: normal;
   font-size: 16px;
@@ -59,12 +61,12 @@
   gap: 30px;
 }
 
-.projects-item,
-.projects-link {
+/*.projects-list__item,*/
+.projects-list__link {
   display: block;
 }
 
-.projects-item {
+.projects-list__item {
   display: block;
 
   transition-property: box-shadow;
@@ -73,16 +75,17 @@
 
   &:hover,
   &:focus {
-    box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.12), 0px 4px 4px rgba(0, 0, 0, 0.06), 1px 4px 6px rgba(0, 0, 0, 0.16);
+    box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.12), 0px 4px 4px rgba(0, 0, 0, 0.06),
+      1px 4px 6px rgba(0, 0, 0, 0.16);
   }
 }
 
 /*Застилізував рамкою текст під фото*/
-.borders {
+.projects-list__borders {
   display: block;
-  border-bottom: 1px solid #EEEEEE;
-  border-left: 1px solid #EEEEEE;
-  border-right: 1px solid #EEEEEE;
+  border-bottom: 1px solid #eeeeee;
+  border-left: 1px solid #eeeeee;
+  border-right: 1px solid #eeeeee;
   padding-top: 20px;
   padding-bottom: 20px;
   padding-left: 24px;

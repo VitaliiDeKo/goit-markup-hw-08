@@ -1,25 +1,25 @@
 .page-header {
   background-color: var(--white-color-text);
-  border-bottom: 1px solid #ECECEC;
-  }
+  border-bottom: 1px solid #ececec;
+}
 
 .header-container {
   display: flex;
 }
 
 /*Поставив в строку три елементи списку в хедері*/
-.header-list-adress {
+.list-adress {
   display: flex;
   align-items: center;
   padding-right: 0;
-  & .header-item:not(:last-child) {
-      margin-right: 30px;
-    }
+  & .list-adress__item:not(:last-child) {
+    margin-right: 30px;
+  }
 }
 
 /*Задали флекс контейнеру в хедері та 
 вирівняли елементи вздовж осі*/
-.head-nav {
+.navigation {
   display: flex;
   align-items: center;
 }
@@ -29,16 +29,15 @@
   align-items: center;
   padding-right: 318px;
 
-  & .header-item:not(:last-child) {
+  & .header-list__item:not(:last-child) {
     margin-right: 50px;
   }
 }
 
-
-.header-link,
-.header-link-blue,
-.header-link-mail,
-.header-link-phone {
+.header-list__link,
+.header-list__link-blue,
+.list-adress__link-mail,
+.list-adress__link-phone {
   padding-top: 32px;
   padding-bottom: 32px;
 
@@ -47,37 +46,37 @@
   transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 }
 
-.header-link-blue {
+.header-list__link-blue {
   position: relative;
 
   &::after {
-      content: " ";
-      position: absolute;
-      display: block;
-      width: 100%;
-      height: 4px;
-      background: var(--accent);
-      border-radius: 2px;
-      top: 76px;
-      left: 0;
-      background-size: contain;
-      transform: translateY();
-    }
+    content: ' ';
+    position: absolute;
+    display: block;
+    width: 100%;
+    height: 4px;
+    background: var(--accent);
+    border-radius: 2px;
+    top: 76px;
+    left: 0;
+    background-size: contain;
+    transform: translateY();
+  }
 }
 
-.header-list-adress .header-item,
-.header-list .header-item {
+.list-adress .list-adress__item,
+.header-list .header-list__item {
   display: block;
 }
 
 /*Прибрав точки зі списку в Хедері*/
-.header-item {
+.header-list__item {
   list-style: none;
 
   .header-list &,
-  .header-list-adress & {
-      text-align: center;
-    }
+  .list-adress & {
+    text-align: center;
+  }
 }
 
 .studio {
@@ -88,7 +87,7 @@
 встановив праві марджини та паддінг на логотип в футері на обох сторінках*/
 .logo,
 .logo-white,
-.logo-bleck {
+.logo__logo-bleck {
   margin-right: 0;
   padding-right: 0;
 }
@@ -103,6 +102,7 @@
   padding-top: 0;
   padding-bottom: 0;
   margin-right: 0;
+  text-decoration: none;
 
   &:hover,
   &:focus {
@@ -110,7 +110,7 @@
   }
 }
 
-.logo-bleck {
+.logo__logo-bleck {
   color: var(--logo-color);
   font-family: Raleway;
   font-size: var(--head-size);
@@ -145,12 +145,12 @@
   }
 }
 
-.top {
+.logo-top {
   margin-right: 93px;
 }
 
 /*Застилізував Хедер посилання*/
-.header-link {
+.header-list__link {
   font-weight: var(--weight-three);
   font-size: var(--low-size);
   line-height: 1.14;
@@ -163,7 +163,7 @@
   }
 }
 
-.header-link-blue {
+.header-list__link-blue {
   font-weight: var(--weight-three);
   font-size: var(--low-size);
   line-height: 1.14;
@@ -176,7 +176,7 @@
   }
 }
 
-.header-link-mail {
+.list-adress__link-mail {
   display: flex;
   font-weight: var(--weight-three);
   font-size: var(--low-size);
@@ -193,7 +193,7 @@
   }
 }
 
-.header-link-phone {
+.list-adress__link-phone {
   display: flex;
   font-weight: var(--weight-three);
   font-size: var(--low-size);
@@ -217,11 +217,7 @@
   color: var(--color-text);
 }
 
-.header-icon {
+.list-adress__icon {
   margin-right: 10px;
   fill: currentColor;
-}
-
-.header-container {
-  display: flex;
 }

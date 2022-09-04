@@ -13,10 +13,10 @@
   transition-property: background-color, color;
   transition-duration: 250ms;
   transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
-  
+
   &:hover,
   &:focus {
     background-color: var(--white-color-text);
     color: var(--accent);
-}
+  }
 }
