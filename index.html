@@ -18,16 +18,15 @@
       crossorigin="anonymous"
       referrerpolicy="no-referrer"
     />
-  <link rel="stylesheet" href="./css/main.min.css" />
+    <link rel="stylesheet" href="./css/main.min.css" />
   </head>
   <body class="body">
-      <header class="page-header">
+    <header class="page-header">
       <div class="container header-container">
         <nav class="navigation">
           <a href="/" class="logo logo-link logo-top" lang="en"
             >Web<span class="logo__logo-bleck link">Studio</span></a
           >
-          <!--Студія, портфоліо, контакти-->
           <ul class="header-list">
             <li class="header-list__item studio">
               <a href="./index.html" class="header-list__link-blue link">Студія</a>
@@ -35,10 +34,11 @@
             <li class="header-list__item">
               <a href="./portfolio.html" class="header-list__link link">Портфоліо</a>
             </li>
-            <li class="header-list__item"><a href="" class="header-list__link link">Контакти</a></li>
+            <li class="header-list__item">
+              <a href="" class="header-list__link link">Контакти</a>
+            </li>
           </ul>
         </nav>
-        <!--Електронна пошта та телефон-->
         <ul class="list-adress">
           <li class="list-adress__item">
             <a href="info@devstudio.com" class="list-adress__link-mail link">
@@ -55,17 +55,66 @@
             >
           </li>
         </ul>
+        <a href="" class="header-burger" data-menu-open>
+          <svg class="header-burger__icon" width="40px" height="40px">
+            <use href="./images/icons.svg#icon-menu_40px"></use></svg
+        ></a>
+
+        <div class="mobile-menu is-hidden" data-menu>
+          <div class="mobile-menu-container">
+            <button type="button" class="mobile-menu__button" data-menu-close>
+              <svg class="mobile-menu__close-icon" width="18.67" height="18.67">
+                <use href="./images/icons.svg#icon-close-black"></use>
+              </svg>
+            </button>
+
+            <ul class="mobile-menu__list-nav">
+              <li class="mobile-menu__item-nav marg-x">
+                <a href="./index.html" class="mobile-menu__link-nav-blue">Студія</a>
+              </li>
+              <li class="mobile-menu__item-nav marg-y">
+                <a href="./portfolio.html" class="mobile-menu__link-nav">Портфоліо</a>
+              </li>
+              <li class="mobile-menu__item-nav">
+                <a href="" class="mobile-menu__link-nav">Контакти</a>
+              </li>
+            </ul>
+            <ul class="mobile-menu__list-connect">
+              <li class="mobile-menu__item-connect">
+                <a href="+380961111111" class="mobile-menu__link-connect-blue">+38 096 111 11 11</a>
+              </li>
+              <li class="mobile-menu__item-connect">
+                <a href="info@devstudio.com" class="mobile-menu__link-connect"
+                  >info@devstudio.com</a
+                >
+              </li>
+            </ul>
+            <ul class="mobile-menu__list-soc">
+              <li class="mobile-menu__item-soc">
+                <a href="" class="mobile-menu__link-soc">Instagram</a>
+              </li>
+              <li class="mobile-menu__item-soc">
+                <a href="" class="mobile-menu__link-soc">Twitter</a>
+              </li>
+
+              <li class="mobile-menu__item-soc">
+                <a href="" class="mobile-menu__link-soc">Facebook</a>
+              </li>
+              <li class="mobile-menu__item-soc">
+                <a href="" class="mobile-menu__link-soc-end">LinkedIn</a>
+              </li>
+            </ul>
+          </div>
+        </div>
       </div>
     </header>
     <main>
-      <!--Головний банер сайту з кнопкою "замовити послугу"-->
       <section class="hero">
         <div class="container">
           <h1 class="hero-title">ЕФЕКТИВНІ РІШЕННЯ ДЛЯ ВАШОГО БІЗНЕСУ</h1>
           <button type="button" class="btn" data-modal-open>Замовити послугу</button>
         </div>
       </section>
-      <!--Переваги, в подальшому зробити тег <h2> "Наші переваги" невидимим-->
       <section class="advances">
         <div class="container">
           <h2 class="visually-hidden">Hаші переваги</h2>
@@ -120,7 +169,6 @@
       <section class="about">
         <div class="container">
           <h2 class="about-title centered">Чим ми займаємося</h2>
-          <!--Фото чим ми займаємось-->
           <ul class="about-list">
             <li class="about-item">
               <div class="about-box">
@@ -154,9 +202,16 @@
       <section class="team">
         <div class="container">
           <h2 class="team-title-all centered">Наша команда</h2>
-          <!--Фото нашої команди-->
           <ul class="team-list centered">
             <li class="team-item">
+              <picture>
+                <source srcset=" ./images/igordemyanenko-desk-1x.jpg" 1x,
+                ./images/igordemyanenko-desk-2x.jpg 2x" media="(min-width:1200px)" /> <source
+                srcset=" ./images/igordemyanenko-tab-1x.jpg" 1x, ./images/igordemyanenko-tab-2x.jpg
+                2x" media="(min-width:768px)" /> <source srcset="
+                ./images/igordemyanenko-mob-1x.jpg" 1x, ./images/igordemyanenko-mob-2x.jpg 2x"
+                media="(min-width:480px)" />
+              </picture>
               <img src="./images/ihor_demyanenko.jpg" alt="Фото Ігора Дем'яненка" width="270" />
               <div class="team-box">
                 <h3 class="team-title">Ігор Дем'яненко</h3>
@@ -357,7 +412,6 @@
         </div>
       </section>
     </main>
-    <!-- Підвал сторінки -->
     <footer class="footer">
       <div class="container footer-conteiner">
         <div class="footer-logo-address">
@@ -419,24 +473,24 @@
           <p class="footer-text-form">ПІДПИШІТЬСЯ НА РОЗСИЛКУ</p>
           <form class="footer-form">
             <input
-                type="email"
-                class="footer-input"
-                name="fut-user-email"
-                placeholder="E-mail"
-                required
-              />
-              <div class="footer-wrap">
-                <button type="submit" class="footer-btn">
-                  Підписатися
-                  <svg class="fut-input-icon" width="24" height="24">
+              type="email"
+              class="footer-input"
+              name="fut-user-email"
+              placeholder="E-mail"
+              required
+            />
+            <div class="footer-wrap">
+              <button type="submit" class="footer-btn">
+                Підписатися
+                <svg class="fut-input-icon" width="24" height="24">
                   <use href="./images/icons.svg#icon-icon-send-1"></use>
                 </svg>
-                </button>
-              </div>
-            </form>
+              </button>
+            </div>
+          </form>
+        </div>
       </div>
     </footer>
-
     <div class="backdrop is-hidden" data-modal>
       <div class="modal">
         <button type="button" class="modal-close" data-modal-close>
@@ -506,7 +560,8 @@
                   <use href="./images/icons.svg#icon-Vector"></use>
                 </svg>
               </span>
-              Погоджуюся з розсилкою та приймаю<pre> </pre>
+              Погоджуюся з розсилкою та приймаю
+
               <a href="" class="check-link">Умови договору</a>
             </label>
           </div>
@@ -515,5 +570,6 @@
       </div>
     </div>
     <script src="./js/modal.js"></script>
+    <script src="./js/mobile-menu.js"></script>
   </body>
 </html>

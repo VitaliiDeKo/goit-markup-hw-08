@@ -1,5 +1,6 @@
 @import 'base/reset';
 @import 'utils/variables';
+@import 'utils/mixins';
 @import 'utils/hidden';
 @import 'layauts/header';
 @import 'layauts/hero';
@@ -11,6 +12,7 @@
 @import 'layauts/projects';
 @import 'layauts/footer';
 @import 'components/container';
+@import 'components/form-header';
 @import 'components/form-footer';
 @import 'components/fofm-modal';
 @import 'components/batton-hero';

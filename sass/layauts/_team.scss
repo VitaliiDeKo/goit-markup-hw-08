@@ -1,36 +1,52 @@
 .team {
-  padding-top: 94px;
-  padding-bottom: 94px;
+  padding-top: 60px;
+  padding-bottom: 60px;
   display: flex;
   background-color: var(--third-bgc-color);
+
+  @include desktop {
+    padding-top: 94px;
+    padding-bottom: 94px;
+  }
 }
 
-/*Виставив в лінію Фото нашої команди*/
 .team-list {
   display: flex;
+  flex-wrap: wrap;
+  gap: 30px;
 }
 
-/*Прибрав крапки у списку членів команди, та застилізував фон фото членів команди*/
 .team-item {
   list-style: none;
   display: block;
-  max-width: 270px;
-  box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14), 0px 2px 1px rgba(0, 0, 0, 0.2);
+  box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14),
+    0px 2px 1px rgba(0, 0, 0, 0.2);
   border-radius: 0px 0px 4px 4px;
   background-color: var(--white-color-text);
+  width: 100%;
 
-  .team-list &:not(:last-child) {
-    margin-right: 30px;
+  @include tablet {
+    width: calc((100% - 30px) / 2);
+  }
+  @include desktop {
+    width: calc((100% - 90px) / 4);
   }
 }
 
 .team-title-all {
   font-weight: var(--weight-one);
-  font-size: var(--title-size);
-  line-height: 1.16;
+  font-size: 28px;
+  line-height: 1.17;
+  text-align: center;
   letter-spacing: 0.03em;
+  margin-bottom: 30px;
   color: var(--color-h);
-  margin-bottom: 50px;
+
+  @include desktop {
+    font-size: var(--title-size);
+    line-height: 1.16;
+    margin-bottom: 50px;
+  }
 }
 
 .team-title {
@@ -42,7 +58,6 @@
   margin-bottom: 10px;
 }
 
-/*Застилізував тексти p, що під фото членів команди*/
 .team-text {
   font-size: var(--king-size);
   line-height: 1.18;
@@ -56,7 +71,6 @@
   padding-bottom: 30px;
 }
 
-/*Створюємо іконки соцмереж команди*/
 .team-link-soc {
   height: 44px;
   width: 44px;
@@ -77,15 +91,12 @@
   }
 }
 
-/*Списку задано флекс, список виставлено
-по центру, встановлено відстань між Li 10px*/
 .team-soc {
   display: flex;
   justify-content: center;
   gap: 10px;
 }
 
-/*Встановлено колір іконок*/
 .team-soc-icon {
   fill: var(--icon-color);
 

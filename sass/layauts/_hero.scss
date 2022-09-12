@@ -2,30 +2,63 @@
   display: block;
   background-color: #303030;
   background-image: linear-gradient(rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)),
-    url(../images/hero4.jpg);
+    url(../images/hero-mobile.jpg);
   background-repeat: no-repeat;
   background-position: center;
   text-align: center;
-  padding-top: 200px;
-  padding-bottom: 200px;
-  height: 600px;
-  max-width: 1600px;
+  padding-top: 118px;
+  padding-bottom: 118px;
+  height: 400px;
+  max-width: 480px;
   background-size: cover;
   margin-left: auto;
   margin-right: auto;
   position: relative;
+  @include retina {
+    bmeackground-image: linear-gradient(rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)),
+      url(../images/Header2xmobile.jpg);
+  }
 }
-/*Застилізував заголовок h1 ,в Хиро*/
+@include tablet {
+  height: 400px;
+  max-width: 768px;
+  background-image: linear-gradient(rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)),
+    url(../images/hero-tablet.jpg);
+  @include retina {
+    background-image: linear-gradient(rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)),
+      url(../images/Header2xtablet.jpg);
+  }
+}
+@include desktop {
+  padding-top: 200px;
+  padding-bottom: 200px;
+  height: 600px;
+  max-width: 1600px;
+  background-image: linear-gradient(rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)),
+    url(../images/hero4.jpg);
+  @include retina {
+    background-image: linear-gradient(rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)),
+      url(../images/Header2xdesktop.jpg);
+  }
+}
+
 .hero-title {
-  display: block;
   font-weight: 900;
-  font-size: 44px;
-  line-height: 1.36;
+  font-size: 26px;
+  line-height: 1.61;
+  text-align: center;
   letter-spacing: 0.06em;
+  display: block;
   color: var(--white-color-text);
   margin-left: auto;
   margin-right: auto;
   margin-bottom: 30px;
   justify-content: center;
-  width: 696px;
+  width: 360px;
+
+  @include desktop {
+    font-size: 44px;
+    line-height: 1.36;
+    width: 696px;
+  }
 }

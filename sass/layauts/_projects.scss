@@ -32,7 +32,7 @@
 .projects-list__item:hover .projects-list__top-text {
   transform: translateY(0);
 }
-/*Застилізував заголовки H2 в розділі 9 проектів Портфоліо*/
+
 .projects-list__title {
   font-family: 'Roboto';
   font-weight: var(--weight-one);
@@ -59,6 +59,7 @@
   display: flex;
   flex-wrap: wrap;
   gap: 30px;
+  justify-content: center;
 }
 
 /*.projects-list__item,*/
@@ -78,6 +79,12 @@
     box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.12), 0px 4px 4px rgba(0, 0, 0, 0.06),
       1px 4px 6px rgba(0, 0, 0, 0.16);
   }
+  @include tablet {
+    width: calc((100% - 30px) / 2);
+  }
+  @include desktop {
+    width: calc((100% - 60px) / 3);
+  }
 }
 
 /*Застилізував рамкою текст під фото*/
@@ -89,10 +96,4 @@
   padding-top: 20px;
   padding-bottom: 20px;
   padding-left: 24px;
-}
-
-img {
-  display: block;
-  max-width: 100%;
-  height: auto;
 }

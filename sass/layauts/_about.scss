@@ -1,51 +1,56 @@
- .about {
-   padding-bottom: 94px;
-   display: flex;
- }
- 
- .about-title {
-   font-weight: 700;
-   font-size: var(--title-size);
-   line-height: 1.16;
-   letter-spacing: 0.03em;
-   color: var(--color-h);
-   margin-bottom: 50px;
- }
+.about {
+  padding-bottom: 94px;
+  display: flex;
+  font-size: var(--title-size);
+  @media screen and (max-width: 1199px) {
+    display: none;
+  }
+}
 
- /*Прибрав крапки та застилізував фон в розділі фото чим ми займаємось*/
- .about-list {
-   list-style: none;
-   display: flex;
- }
+.about-title {
+  font-weight: 700;
+  font-size: var(--title-size);
+  line-height: 1.16;
+  letter-spacing: 0.03em;
+  color: var(--color-h);
+  margin-bottom: 50px;
+  text-align: center;
+}
 
-  .about-item {
-   display: flex;
-   position: relative;
+.about-list {
+  list-style: none;
+  display: flex;
+  gap: 30px;
+}
 
-   &:not(:last-child) {
-     margin-right: 30px;
-   }
- }
- 
- .about-box {
-   position: absolute;
-   display: inline-block;
-   width: 370px;
-   height: 70px;
-   background: rgba(47, 48, 58, 0.8);
-   bottom: 0;
- }
+.about-item {
+  display: flex;
+  position: relative;
 
- .about-title-next {
-   position: absolute;
-   display: inline-block;
-   font-weight: 700;
-   font-size: var(--low-size);
-   line-height: 1, 14;
-   letter-spacing: 0.03em;
-   text-transform: uppercase;
-   color: var(--white-color-text);
-   top: 50%;
-   left: 50%;
-   transform: translate(-50%, -50%);
- }
+  // &:not(:last-child) {
+  //   margin-right: 30px;
+  //}
+}
+
+.about-box {
+  position: absolute;
+  display: inline-block;
+  width: 370px;
+  height: 70px;
+  background: rgba(47, 48, 58, 0.8);
+  bottom: 0;
+}
+
+.about-title-next {
+  position: absolute;
+  display: inline-block;
+  font-weight: 700;
+  font-size: var(--low-size);
+  line-height: 1, 14;
+  letter-spacing: 0.03em;
+  text-transform: uppercase;
+  color: var(--white-color-text);
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}

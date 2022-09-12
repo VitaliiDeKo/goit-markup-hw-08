@@ -7,37 +7,51 @@
   display: flex;
 }
 
-/*Поставив в строку три елементи списку в хедері*/
 .list-adress {
-  display: flex;
+  display: none;
   align-items: center;
   padding-right: 0;
   & .list-adress__item:not(:last-child) {
     margin-right: 30px;
   }
-}
 
-/*Задали флекс контейнеру в хедері та 
-вирівняли елементи вздовж осі*/
+  @include tablet {
+    display: block;
+    & .list-adress__item:not(:last-child) {
+      margin-right: 0px;
+    }
+  }
+  @include desktop {
+    display: flex;
+    & .list-adress__item:not(:last-child) {
+      margin-right: 30px;
+    }
+  }
+}
 .navigation {
   display: flex;
   align-items: center;
 }
 
 .header-list {
-  display: flex;
+  display: none;
   align-items: center;
   padding-right: 318px;
 
   & .header-list__item:not(:last-child) {
     margin-right: 50px;
   }
+  @include tablet {
+    display: flex;
+    padding-right: 80px;
+  }
+  @include desktop {
+    padding-right: 318px;
+  }
 }
 
 .header-list__link,
-.header-list__link-blue,
-.list-adress__link-mail,
-.list-adress__link-phone {
+.header-list__link-blue {
   padding-top: 32px;
   padding-bottom: 32px;
 
@@ -69,7 +83,6 @@
   display: block;
 }
 
-/*Прибрав точки зі списку в Хедері*/
 .header-list__item {
   list-style: none;
 
@@ -83,8 +96,6 @@
   margin-left: 0;
 }
 
-/*Застилізував Лого, 
-встановив праві марджини та паддінг на логотип в футері на обох сторінках*/
 .logo,
 .logo-white,
 .logo__logo-bleck {
@@ -96,17 +107,22 @@
   display: block;
   font-family: 'Raleway';
   font-weight: var(--weight-one);
-  font-size: var(--head-size);
+  font-size: 24px;
+  line-height: 1.16;
   letter-spacing: 0.03em;
   color: var(--accent);
-  padding-top: 0;
-  padding-bottom: 0;
+  padding-top: 16px;
+  padding-bottom: 16px;
   margin-right: 0;
   text-decoration: none;
 
   &:hover,
   &:focus {
     color: var(--accent);
+  }
+  @include desktop {
+    font-size: var(--head-size);
+    line-height: 1.19;
   }
 }
 
@@ -146,10 +162,15 @@
 }
 
 .logo-top {
-  margin-right: 93px;
+  margin-right: 276px;
+  @include tablet {
+    margin-right: 88px;
+  }
+  @include desktop {
+    margin-right: 93px;
+  }
 }
 
-/*Застилізував Хедер посилання*/
 .header-list__link {
   font-weight: var(--weight-three);
   font-size: var(--low-size);
@@ -186,10 +207,21 @@
   margin-left: 0;
   align-items: center;
   justify-content: center;
+  padding-top: 21px;
+  margin-bottom: 10px;
+
+  transition-property: color;
+  transition-duration: 250ms;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 
   &:hover,
   &:focus {
     color: var(--accent);
+  }
+  @include desktop {
+    padding-top: 32px;
+    padding-bottom: 32px;
+    margin-bottom: 0;
   }
 }
 
@@ -201,11 +233,20 @@
   letter-spacing: 0.02em;
   color: var(--color-text);
   align-items: center;
-  justify-content: center;
+  justify-content: left;
+  padding-bottom: 21px;
 
+  transition-property: color;
+  transition-duration: 250ms;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
   &:hover,
   &:focus {
     color: var(--accent);
+  }
+  @include desktop {
+    padding-top: 32px;
+    padding-bottom: 32px;
+    justify-content: center;
   }
 }
 
@@ -220,4 +261,12 @@
 .list-adress__icon {
   margin-right: 10px;
   fill: currentColor;
+}
+
+.header-burger {
+  padding-top: 10px;
+  padding-bottom: 10px;
+  @include tablet {
+    display: none;
+  }
 }

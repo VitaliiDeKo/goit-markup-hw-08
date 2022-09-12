@@ -34,8 +34,19 @@ body {
   font-family: 'Roboto', sans-serif;
   color: var(--color-h);
 }
-
+img {
+  display: block;
+  width: 100%;
+  max-width: 100%;
+  height: auto;
+}
+a {
+  text-decoration: none;
+}
 /*Прибрав підкреслювання з посилань*/
 .link {
-  text-decoration: none
+  text-decoration: none;
+}
+.centered {
+  text-align: center;
 }

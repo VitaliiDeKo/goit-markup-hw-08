@@ -1,7 +1,7 @@
 .btn {
   display: inline-block;
   border-radius: 4px;
-  padding: 10px 32px;
+  padding: 10px 24px;
   font-weight: var(--weight-one);
   font-size: var(--king-size);
   line-height: 1.87;
@@ -18,5 +18,8 @@
   &:focus {
     background-color: var(--white-color-text);
     color: var(--accent);
+  }
+  @include desktop {
+    padding: 10px 32px;
   }
 }
