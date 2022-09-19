@@ -264,6 +264,10 @@
 }
 
 .header-burger {
+  border: none;
+  font: inherit;
+  color: blue($color: #000000);
+  background-color: transparent;
   padding-top: 10px;
   padding-bottom: 10px;
   @include tablet {

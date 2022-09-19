@@ -355,6 +355,10 @@ a {
 }
 
 .header-burger {
+  border: none;
+  font: inherit;
+  color: 0;
+  background-color: transparent;
   padding-top: 10px;
   padding-bottom: 10px;
 }
@@ -387,8 +391,7 @@ a {
 }
 @media screen and (min-width: 768px) {
   .hero {
-    height: 400px;
-    max-width: 768px;
+    min-width: 768px;
     background-image: linear-gradient(rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)), url(../images/hero-tablet.jpg);
   }
 }
@@ -924,6 +927,11 @@ a {
   line-height: 1.16;
   margin-bottom: 20px;
 }
+@media screen and (min-width: 768px) {
+  .logfut {
+    padding-top: 0;
+  }
+}
 @media screen and (min-width: 1200px) {
   .logfut {
     font-size: 26px;
@@ -1085,15 +1093,9 @@ a {
   top: 0;
   left: 0;
   background-color: #ffffff;
-  width: 100vw;
-  height: 100wh;
-  z-index: 1;
-}
-.mobile-menu > .mobile-menu-container {
-  display: flex;
-  justify-content: space-between;
-  flex-direction: column;
+  width: 100%;
   height: 100%;
+  z-index: 1;
 }
 @media screen and (min-width: 768px) {
   .mobile-menu {
@@ -1102,16 +1104,19 @@ a {
 }
 
 .mobile-menu-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  min-height: 100%;
   position: relative;
-  width: 480px;
+  min-width: 480px;
   padding-left: 40px;
   padding-right: 15px;
-  padding-top: 10px;
-  padding-bottom: 48px;
 }
 
 .mobile-menu__button {
   display: block;
+  margin-left: auto;
   position: absolute;
   top: 10px;
   right: 10px;
@@ -1306,7 +1311,7 @@ a {
   border: 1px solid rgba(255, 255, 255, 0.3);
   filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.15));
   border-radius: 4px;
-  width: 450px;
+  width: calc(100% - 30px);
   height: 50px;
   font-weight: 700;
   font-size: var(--king-size);
@@ -1314,6 +1319,16 @@ a {
   color: var(--white-color-text);
   padding-left: 20px;
   margin-bottom: 20px;
+}
+@media screen and (min-width: 480px) {
+  .footer-input {
+    width: 450px;
+  }
+}
+@media screen and (min-width: 768px) {
+  .footer-input {
+    max-width: 450px;
+  }
 }
 @media screen and (min-width: 1200px) {
   .footer-input {

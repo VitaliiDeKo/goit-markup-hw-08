@@ -55,10 +55,11 @@
             >
           </li>
         </ul>
-        <a href="" class="header-burger" data-menu-open>
+
+        <button type="button" class="header-burger" data-menu-open>
           <svg class="header-burger__icon" width="40px" height="40px">
-            <use href="./images/icons.svg#icon-menu_40px"></use></svg
-        ></a>
+            <use href="./images/icons.svg#icon-menu_40px"></use></svg>
+        </button>
 
         <div class="mobile-menu is-hidden" data-menu>
           <div class="mobile-menu-container">
@@ -174,27 +175,39 @@
               <div class="about-box">
                 <h3 class="about-title-next">Десктопні додатки</h3>
               </div>
-              <img src="./images/img1.jpg" alt="Програміст, что працює з кодом" width="370" />
+              <picture>
+                <source srcset=" ./images/about1-desk-1x.jpeg" 1x,
+                ./images/about1-desk-2x.jpeg 2x" media="(min-width:1200px)" /> 
+                <img src="./images/img1.jpg" alt="Програміст, что працює з кодом" width="370" />
+              </picture>
             </li>
             <li class="about-item">
               <div class="about-box">
                 <h3 class="about-title-next">Мобільні додатки</h3>
               </div>
-              <img
+              <picture>
+                <source srcset=" ./images/about2-desk-1x.jpeg" 1x,
+                ./images/about2-desk-2x.jpeg 2x" media="(min-width:1200px)" /> 
+                <img
                 src="./images/img2.jpg"
                 alt="Програміст, що розробляє застосунок до смартфону"
                 width="370"
-              />
+              />              
+              </picture>
             </li>
             <li class="about-item">
               <div class="about-box">
                 <h3 class="about-title-next">Дизайнерські рішення</h3>
               </div>
-              <img
+              <picture>
+                <source srcset=" ./images/about3-desk-1x.jpeg" 1x,
+                ./images/about3-desk-2x.jpeg 2x" media="(min-width:1200px)" /> 
+                <img
                 src="./images/img3.jpg"
                 alt="Веб дизайнер працює з графікою на планшеті"
                 width="370"
               />
+              </picture>
             </li>
           </ul>
         </div>
@@ -211,8 +224,8 @@
                 2x" media="(min-width:768px)" /> <source srcset="
                 ./images/igordemyanenko-mob-1x.jpg" 1x, ./images/igordemyanenko-mob-2x.jpg 2x"
                 media="(min-width:480px)" />
+                <img src="./images/ihor_demyanenko.jpg" alt="Фото Ігора Дем'яненка" width="270" />
               </picture>
-              <img src="./images/ihor_demyanenko.jpg" alt="Фото Ігора Дем'яненка" width="270" />
               <div class="team-box">
                 <h3 class="team-title">Ігор Дем'яненко</h3>
                 <p class="team-text">Product Designer</p>
@@ -249,7 +262,15 @@
               </div>
             </li>
             <li class="team-item">
-              <img src="./images/olga_repina.jpg" alt="Фото Ольги Репіної" width="270" />
+              <picture>
+                <source srcset=" ./images/olgarepina-desk-1x.jpg" 1x,
+                ./images/olgarepina-desk-2x.jpg 2x" media="(min-width:1200px)" /> <source
+                srcset=" ./images/olgarepina-tab-1x.jpg" 1x, ./images/olgarepina-tab-2x.jpg
+                2x" media="(min-width:768px)" /> <source srcset="
+                ./images/olgarepina-mob-1x.jpg" 1x, ./images/olgarepina-mob-2x.jpg 2x"
+                media="(min-width:480px)" />
+                <img src="./images/olga_repina.jpg" alt="Фото Ольги Репіної" width="270" />
+              </picture>
               <div class="team-box">
                 <h3 class="team-title">Ольга Рєпіна</h3>
                 <p class="team-text">Frontend Developer</p>
@@ -286,7 +307,15 @@
               </div>
             </li>
             <li class="team-item">
-              <img src="./images/mikola_tarasov.jpg" alt="Фото Миколи Тарасова" width="270" />
+              <picture>
+                <source srcset=" ./images/mikolatarasov-desk-1x.jpg" 1x,
+                ./images/mikolatarasov-desk-2x.jpg 2x" media="(min-width:1200px)" /> <source
+                srcset=" ./images/mikolatarasov-tab-1x.jpg" 1x, ./images/mikolatarasov-tab-2x.jpg
+                2x" media="(min-width:768px)" /> <source srcset="
+                ./images/mikolatarasov-mob-1x.jpg" 1x, ./images/mikolatarasov-mob-2x.jpg 2x"
+                media="(min-width:480px)" />
+                <img src="./images/mikola_tarasov.jpg" alt="Фото Миколи Тарасова" width="270" />
+              </picture>
               <div class="team-box">
                 <h3 class="team-title">Микола Тарасов</h3>
                 <p class="team-text">Marketing</p>
@@ -323,7 +352,15 @@
               </div>
             </li>
             <li class="team-item">
-              <img src="./images/michaylo_yermakov.jpg" alt="Фото Михайла Єрмакова" width="270" />
+              <picture>
+                <source srcset=" ./images/mixailermakov-desk-1x.jpg" 1x,
+                ./images/mixailermakov-desk-2x.jpg 2x" media="(min-width:1200px)" /> <source
+                srcset=" ./images/mixailermakov-tab-1x.jpg" 1x, ./images/mixailermakov-tab-2x.jpg
+                2x" media="(min-width:768px)" /> <source srcset="
+                ./images/mixailermakov-mob-1x.jpg" 1x, ./images/mixailermakov-mob-2x.jpg 2x"
+                media="(min-width:480px)" />
+                <img src="./images/michaylo_yermakov.jpg" alt="Фото Михайла Єрмакова" width="270" />
+              </picture>
               <div class="team-box">
                 <h3 class="team-title">Михайло Єрмаков</h3>
                 <p class="team-text">UI Designer</p>

@@ -15,33 +15,35 @@
   margin-right: auto;
   position: relative;
   @include retina {
-    bmeackground-image: linear-gradient(rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)),
+    background-image: linear-gradient(rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)),
       url(../images/Header2xmobile.jpg);
   }
-}
-@include tablet {
-  height: 400px;
-  max-width: 768px;
-  background-image: linear-gradient(rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)),
+
+  @include tablet { 
+    min-width: 768px;
+    background-image: linear-gradient(rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)),
     url(../images/hero-tablet.jpg);
+  
   @include retina {
     background-image: linear-gradient(rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)),
       url(../images/Header2xtablet.jpg);
+  } 
   }
-}
-@include desktop {
+
+  @include desktop {
   padding-top: 200px;
   padding-bottom: 200px;
   height: 600px;
   max-width: 1600px;
   background-image: linear-gradient(rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)),
     url(../images/hero4.jpg);
+    
   @include retina {
     background-image: linear-gradient(rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)),
       url(../images/Header2xdesktop.jpg);
   }
+  }
 }
-
 .hero-title {
   font-weight: 900;
   font-size: 26px;
@@ -62,3 +64,4 @@
     width: 696px;
   }
 }
+

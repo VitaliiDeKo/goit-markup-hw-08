@@ -18,7 +18,6 @@
       crossorigin="anonymous"
       referrerpolicy="no-referrer"
     />
-    <link rel="stylesheet" href="./css/styles.css" />
     <link rel="stylesheet" href="./css/main.min.css" />
   </head>
   <body>
@@ -56,10 +55,11 @@
             >
           </li>
         </ul>
-        <a href="" class="header-burger" data-menu-open>
+
+        <button type="button" class="header-burger" data-menu-open>
           <svg class="header-burger__icon" width="40px" height="40px">
-            <use href="./images/icons.svg#icon-menu_40px"></use></svg
-        ></a>
+            <use href="./images/icons.svg#icon-menu_40px"></use></svg>
+        </button>
 
         <div class="mobile-menu is-hidden" data-menu>
           <div class="mobile-menu-container">
@@ -69,43 +69,47 @@
               </svg>
             </button>
 
-            <ul class="mobile-menu__list-nav">
-              <li class="mobile-menu__item-nav marg-x">
-                <a href="./index.html" class="mobile-menu__link-nav-blue">Студія</a>
-              </li>
-              <li class="mobile-menu__item-nav marg-y">
-                <a href="./portfolio.html" class="mobile-menu__link-nav">Портфоліо</a>
-              </li>
-              <li class="mobile-menu__item-nav">
-                <a href="" class="mobile-menu__link-nav">Контакти</a>
-              </li>
-            </ul>
+            <nav class="mobile-menu__nav">
+              <ul class="mobile-menu__list-nav">
+                <li class="mobile-menu__item-nav marg-x">
+                  <a href="./index.html" class="mobile-menu__link-nav-blue">Студія</a>
+                </li>
+                <li class="mobile-menu__item-nav marg-y">
+                  <a href="./portfolio.html" class="mobile-menu__link-nav">Портфоліо</a>
+                </li>
+                <li class="mobile-menu__item-nav">
+                  <a href="" class="mobile-menu__link-nav">Контакти</a>
+                </li>
+              </ul>
 
-            <ul class="mobile-menu__list-connect">
-              <li class="mobile-menu__item-connect">
-                <a href="+380961111111" class="mobile-menu__link-connect-blue">+38 096 111 11 11</a>
-              </li>
-              <li class="mobile-menu__item-connect">
-                <a href="info@devstudio.com" class="mobile-menu__link-connect"
-                  >info@devstudio.com</a
-                >
-              </li>
-            </ul>
-            <ul class="mobile-menu__list-soc">
-              <li class="mobile-menu__item-soc">
-                <a href="" class="mobile-menu__link-soc">Instagram</a>
-              </li>
-              <li class="mobile-menu__item-soc">
-                <a href="" class="mobile-menu__link-soc">Twitter</a>
-              </li>
+              <ul class="mobile-menu__list-connect">
+                <li class="mobile-menu__item-connect">
+                  <a href="+380961111111" class="mobile-menu__link-connect-blue"
+                    >+38 096 111 11 11</a
+                  >
+                </li>
+                <li class="mobile-menu__item-connect">
+                  <a href="info@devstudio.com" class="mobile-menu__link-connect"
+                    >info@devstudio.com</a
+                  >
+                </li>
+              </ul>
+              <ul class="mobile-menu__list-soc">
+                <li class="mobile-menu__item-soc">
+                  <a href="" class="mobile-menu__link-soc">Instagram</a>
+                </li>
+                <li class="mobile-menu__item-soc">
+                  <a href="" class="mobile-menu__link-soc">Twitter</a>
+                </li>
 
-              <li class="mobile-menu__item-soc">
-                <a href="" class="mobile-menu__link-soc">Facebook</a>
-              </li>
-              <li class="mobile-menu__item-soc">
-                <a href="" class="mobile-menu__link-soc-end">LinkedIn</a>
-              </li>
-            </ul>
+                <li class="mobile-menu__item-soc">
+                  <a href="" class="mobile-menu__link-soc">Facebook</a>
+                </li>
+                <li class="mobile-menu__item-soc">
+                  <a href="" class="mobile-menu__link-soc-end">LinkedIn</a>
+                </li>
+              </ul>
+            </nav>
           </div>
         </div>
       </div>
@@ -135,7 +139,15 @@
             <li class="projects-list__item">
               <a href="#" class="projects-list__link link">
                 <div class="projects-list__top">
-                  <img src="./images/technokryak.jpg" alt="сторінка сайту Технокряк" width="370" />
+                  <picture>
+                    <source srcset=" ./images/technokryak-desk-1x.jpg" 1x,
+                    ./images/technokryak-desk-2x.jpg 2x" media="(min-width:1200px)" /> <source
+                    srcset=" ./images/technokryak-tab-1x.jpg" 1x,
+                    ./images/technokryak-tab-2x.jpg 2x" media="(min-width:768px)" /> <source
+                    srcset=" ./images/technokryak-mob-1x.jpg" 1x,
+                    ./images/technokryak-mob-2x.jpg 2x" media="(min-width:480px)" />
+                    <img src="./images/technokryak.jpg" alt="сторінка сайту Технокряк" width="370" />
+                  </picture>
                   <p class="projects-list__top-text">
                     Ресурс пропонує комплексні пропозиції з різним рівнем функціоналу та сервісів.
                     Все це дозволить відвідувачу отримати вичерпні відомості про компанію чи
@@ -151,12 +163,20 @@
             <li class="projects-list__item">
               <a href="#" class="projects-list__link link">
                 <div class="projects-list__top">
-                  <img
+                  <picture>
+                    <source srcset=" ./images/neworlean-desk-1x.jpg" 1x,
+                    ./images/neworlean-desk-2x.jpg 2x" media="(min-width:1200px)" /> <source
+                    srcset=" ./images/neworlean-tab-1x.jpg" 1x,
+                    ./images/neworlean-tab-2x.jpg 2x" media="(min-width:768px)" /> <source
+                    srcset=" ./images/neworlean-mob-1x.jpg" 1x,
+                    ./images/neworlean-mob-2x.jpg 2x" media="(min-width:480px)" />
+                    <img
                     src="./images/neworlean.jpg"
                     alt="Постер фрагмента гри у баскетбол New Orlean vs
               Golden Star"
                     width="370"
                   />
+                  </picture>
                   <p class="projects-list__top-text">
                     Ресурс пропонує комплексні пропозиції з різним рівнем функціоналу та сервісів.
                     Все це дозволить відвідувачу отримати вичерпні відомості про компанію чи
@@ -172,7 +192,15 @@
             <li class="projects-list__item">
               <a href="#" class="projects-list__link link">
                 <div class="projects-list__top">
-                  <img src="./images/siafud.jpg" alt="Ресторан Seafood логотип" width="370" />
+                  <picture>
+                    <source srcset=" ./images/siafud-desk-1x.jpg" 1x,
+                    ./images/siafud-desk-2x.jpg 2x" media="(min-width:1200px)" /> <source
+                    srcset=" ./images/siafud-tab-1x.jpg" 1x,
+                    ./images/siafud-tab-2x.jpg 2x" media="(min-width:768px)" /> <source
+                    srcset=" ./images/siafud-mob-1x.jpg" 1x,
+                    ./images/siafud-mob-2x.jpg 2x" media="(min-width:480px)" />
+                    <img src="./images/siafud.jpg" alt="Ресторан Seafood логотип" width="370" />
+                  </picture>
                   <p class="projects-list__top-text">
                     Ресурс пропонує комплексні пропозиції з різним рівнем функціоналу та сервісів.
                     Все це дозволить відвідувачу отримати вичерпні відомості про компанію чи
@@ -188,11 +216,19 @@
             <li class="projects-list__item">
               <a href="#" class="projects-list__link link">
                 <div class="projects-list__top">
-                  <img
+                  <picture>
+                    <source srcset=" ./images/prime-desk-1x.jpg" 1x,
+                    ./images/prime-desk-2x.jpg 2x" media="(min-width:1200px)" /> <source
+                    srcset=" ./images/prime-tab-1x.jpg" 1x,
+                    ./images/prime-tab-2x.jpg 2x" media="(min-width:768px)" /> <source
+                    srcset=" ./images/prime-mob-1x.jpg" 1x,
+                    ./images/prime-mob-2x.jpg 2x" media="(min-width:480px)" />
+                    <img
                     src="./images/prime.jpg"
                     alt="Проєкт Prime зображення навушників"
                     width="370"
                   />
+                  </picture>
                   <p class="projects-list__top-text">
                     Ресурс пропонує комплексні пропозиції з різним рівнем функціоналу та сервісів.
                     Все це дозволить відвідувачу отримати вичерпні відомості про компанію чи
@@ -208,11 +244,19 @@
             <li class="projects-list__item">
               <a href="#" class="projects-list__link link">
                 <div class="projects-list__top">
-                  <img
+                  <picture>
+                    <source srcset=" ./images/boxes-desk-1x.jpg" 1x,
+                    ./images/boxes-desk-2x.jpg 2x" media="(min-width:1200px)" /> <source
+                    srcset=" ./images/boxes-tab-1x.jpg" 1x,
+                    ./images/boxes-tab-2x.jpg 2x" media="(min-width:768px)" /> <source
+                    srcset=" ./images/boxes-mob-1x.jpg" 1x,
+                    ./images/boxes-mob-2x.jpg 2x" media="(min-width:480px)" />
+                    <img
                     src="./images/boxes.jpg"
                     alt="Проєкт Boxes зображення двох коробок"
                     width="370"
                   />
+                  </picture>
                   <p class="projects-list__top-text">
                     Ресурс пропонує комплексні пропозиції з різним рівнем функціоналу та сервісів.
                     Все це дозволить відвідувачу отримати вичерпні відомості про компанію чи
@@ -228,7 +272,15 @@
             <li class="projects-list__item">
               <a href="#" class="projects-list__link link">
                 <div class="projects-list__top">
-                  <img src="./images/noborders.jpg" alt="монітор з контентом" width="370" />
+                  <picture>
+                    <source srcset=" ./images/noborders-desk-1x.jpg" 1x,
+                    ./images/noborders-desk-2x.jpg 2x" media="(min-width:1200px)" /> <source
+                    srcset=" ./images/noborders-tab-1x.jpg" 1x,
+                    ./images/noborders-tab-2x.jpg 2x" media="(min-width:768px)" /> <source
+                    srcset=" ./images/noborders-mob-1x.jpg" 1x,
+                    ./images/noborders-mob-2x.jpg 2x" media="(min-width:480px)" />
+                    <img src="./images/noborders.jpg" alt="монітор з контентом" width="370" />
+                  </picture>
                   <p class="projects-list__top-text">
                     Ресурс пропонує комплексні пропозиції з різним рівнем функціоналу та сервісів.
                     Все це дозволить відвідувачу отримати вичерпні відомості про компанію чи
@@ -244,11 +296,19 @@
             <li class="projects-list__item">
               <a href="#" class="projects-list__link link">
                 <div class="projects-list__top">
-                  <img
+                  <picture>
+                    <source srcset=" ./images/limitededition-desk-1x.jpg" 1x,
+                    ./images/limitededition-desk-2x.jpg 2x" media="(min-width:1200px)" /> <source
+                    srcset=" ./images/limitededition-tab-1x.jpg" 1x,
+                    ./images/limitededition-tab-2x.jpg 2x" media="(min-width:768px)" /> <source
+                    srcset=" ./images/limitededition-mob-1x.jpg" 1x,
+                    ./images/limitededition-mob-2x.jpg 2x" media="(min-width:480px)" />
+                    <img
                     src="./images/limitededition.jpg"
                     alt="розгорнута книга із заголовком Limited Edition"
                     width="370"
                   />
+                  </picture>
                   <p class="projects-list__top-text">
                     Ресурс пропонує комплексні пропозиції з різним рівнем функціоналу та сервісів.
                     Все це дозволить відвідувачу отримати вичерпні відомості про компанію чи
@@ -264,11 +324,19 @@
             <li class="projects-list__item">
               <a href="#" class="projects-list__link link">
                 <div class="projects-list__top">
-                  <img
+                  <picture>
+                    <source srcset=" ./images/lab-desk-1x.jpg" 1x,
+                    ./images/lab-desk-2x.jpg 2x" media="(min-width:1200px)" /> <source
+                    srcset=" ./images/lab-tab-1x.jpg" 1x,
+                    ./images/lab-tab-2x.jpg 2x" media="(min-width:768px)" /> <source
+                    srcset=" ./images/lab-mob-1x.jpg" 1x,
+                    ./images/lab-mob-2x.jpg 2x" media="(min-width:480px)" />
+                    <img
                     src="./images/lab.jpg"
                     alt="зображення товарного ярлика з лого"
                     width="370"
                   />
+                  </picture>
                   <p class="projects-list__top-text">
                     Ресурс пропонує комплексні пропозиції з різним рівнем функціоналу та сервісів.
                     Все це дозволить відвідувачу отримати вичерпні відомості про компанію чи
@@ -284,11 +352,19 @@
             <li class="projects-list__item">
               <a href="#" class="projects-list__link link">
                 <div class="projects-list__top">
-                  <img
+                  <picture>
+                    <source srcset=" ./images/growingbusines-desk-1x.jpg" 1x,
+                    ./images/growingbusines-desk-2x.jpg 2x" media="(min-width:1200px)" /> <source
+                    srcset=" ./images/growingbusines-tab-1x.jpg" 1x,
+                    ./images/growingbusines-tab-2x.jpg 2x" media="(min-width:768px)" /> <source
+                    srcset=" ./images/growingbusines-mob-1x.jpg" 1x,
+                    ./images/growingbusines-mob-2x.jpg 2x" media="(min-width:480px)" />
+                    <img
                     src="./images/growingbusiness.jpg"
                     alt="користувач, що працює з ноутбуком"
                     width="370"
                   />
+                  </picture>
                   <p class="projects-list__top-text">
                     Ресурс пропонує комплексні пропозиції з різним рівнем функціоналу та сервісів.
                     Все це дозволить відвідувачу отримати вичерпні відомості про компанію чи
