@@ -9,7 +9,7 @@
   padding-top: 118px;
   padding-bottom: 118px;
   height: 400px;
-  max-width: 480px;
+  width: calc(100% - 4px);
   background-size: cover;
   margin-left: auto;
   margin-right: auto;
@@ -17,6 +17,14 @@
   @include retina {
     background-image: linear-gradient(rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)),
       url(../images/Header2xmobile.jpg);
+  }
+  @include mobile{
+    min-width: 480px;
+
+    @include retina {
+      background-image: linear-gradient(rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)),
+        url(../images/Header2xmobile.jpg);
+    }
   }
 
   @include tablet { 
@@ -40,7 +48,7 @@
     
   @include retina {
     background-image: linear-gradient(rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)),
-      url(../images/Header2xdesktop.jpg);
+      url(../images/header2xdesktop.jpg);
   }
   }
 }
@@ -56,12 +64,12 @@
   margin-right: auto;
   margin-bottom: 30px;
   justify-content: center;
-  width: 360px;
+  max-width: 360px;
 
   @include desktop {
     font-size: 44px;
     line-height: 1.36;
-    width: 696px;
+    min-width: 696px;
   }
 }
 

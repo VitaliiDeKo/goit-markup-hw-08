@@ -5,6 +5,11 @@
 
 .header-container {
   display: flex;
+  // flex-direction: row;
+  justify-content: space-between;
+  @include tablet {
+    justify-content: flex-start;
+  }
 }
 
 .list-adress {
@@ -162,7 +167,7 @@
 }
 
 .logo-top {
-  margin-right: 276px;
+  // margin-right: 276px;
   @include tablet {
     margin-right: 88px;
   }
