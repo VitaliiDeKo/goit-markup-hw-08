@@ -1,7 +1,8 @@
 .clients {
   padding-top: 60px;
   padding-bottom: 60px;
-  @media screen and (min-width: 1200px) {
+
+  @include desktop {
     padding-top: 94px;
     padding-bottom: 94px;
   }
@@ -19,7 +20,7 @@
   color: var(--color-h);
   margin-bottom: 30px;
 
-  @media screen and (min-width: 1200px) {
+  @include desktop {
     font-size: var(--title-size);
     line-height: 1.16;
     margin-bottom: 50px;
@@ -38,6 +39,7 @@
 
 .client-item {
   width: 100%;
+ text-align: center;
   @include mobile {
     width: calc((100% - 30px) / 2);
   }

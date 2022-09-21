@@ -722,6 +722,7 @@ a {
 
 .client-item {
   width: 100%;
+  text-align: center;
 }
 @media screen and (min-width: 480px) {
   .client-item {
