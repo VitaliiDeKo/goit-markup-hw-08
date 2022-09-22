@@ -6,9 +6,10 @@
 }
 
 .projects-list__top-text {
+  display: flex;
   position: absolute;
-  width: 370px;
-  height: 294px;
+  width: 100%;
+  height: 100%;
   left: 0;
   top: 0;
   font-weight: var(--weight-two);
@@ -17,8 +18,10 @@
   letter-spacing: 0.03em;
   color: var(--white-color-text);
   background: rgba(33, 150, 243, 0.9);
-  padding: 63px 24px;
-
+  padding-left: 63px;
+  padding-right: 63px;
+  align-items: center;
+  
   transform: translateY(100%);
 
   transition-property: transform;
@@ -28,11 +31,11 @@
   .projects-list__item:hover & {
     transform: translateY(0);
   }
-}
-.projects-list__item:hover .projects-list__top-text {
-  transform: translateY(0);
-}
 
+  .projects-list__item:focus & {
+    transform: translateY(0);
+  }
+}
 .projects-list__title {
   font-family: 'Roboto';
   font-weight: var(--weight-one);
@@ -43,7 +46,6 @@
   margin-bottom: 4px;
 }
 
-/*Застилізував текст в розділі 9 проектів Портфоліо*/
 .projects-list__text {
   font-family: 'Roboto';
   font-style: normal;
@@ -53,7 +55,6 @@
   color: var(--color-text);
 }
 
-/*Застилізував фон навколо 9 посилань Портфоліо*/
 .projects-list {
   list-style: none;
   display: flex;
@@ -62,7 +63,6 @@
   justify-content: center;
 }
 
-/*.projects-list__item,*/
 .projects-list__link {
   display: block;
 }
@@ -87,7 +87,6 @@
   }
 }
 
-/*Застилізував рамкою текст під фото*/
 .projects-list__borders {
   display: block;
   border-bottom: 1px solid #eeeeee;
@@ -96,4 +95,5 @@
   padding-top: 20px;
   padding-bottom: 20px;
   padding-left: 24px;
+  padding-right: 24px;
 }
