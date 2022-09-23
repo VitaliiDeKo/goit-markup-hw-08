@@ -33,6 +33,19 @@ body {
   font-family: "Roboto", sans-serif;
   color: var(--color-h);
 }
+body body.modal-open {
+  height: 100vh;
+  overflow-y: hidden;
+}
+body body.modal-open.modal-open {
+  height: 100vh;
+  overflow: hidden;
+}
+
+body.modal-open {
+  height: 100vh;
+  overflow: hidden;
+}
 
 img {
   display: block;
@@ -110,6 +123,7 @@ a {
   display: none;
   align-items: center;
   padding-right: 0;
+  margin-left: auto;
 }
 .list-adress .list-adress__item:not(:last-child) {
   margin-right: 30px;
@@ -139,7 +153,6 @@ a {
 .header-list {
   display: none;
   align-items: center;
-  padding-right: 318px;
 }
 .header-list .header-list__item:not(:last-child) {
   margin-right: 50px;
@@ -176,7 +189,7 @@ a {
   height: 4px;
   background: var(--accent);
   border-radius: 2px;
-  top: 76px;
+  top: 77px;
   left: 0;
   background-size: contain;
   transform: translateY();
@@ -483,6 +496,12 @@ a {
   color: var(--color-h);
   margin-bottom: 10px;
   margin-top: 0;
+  text-align: center;
+}
+@media screen and (min-width: 768px) {
+  .advances-title {
+    text-align: left;
+  }
 }
 
 .advances-text {
@@ -490,7 +509,6 @@ a {
   line-height: 1.71;
   letter-spacing: 0.03em;
   color: var(--color-text);
-  max-width: 270px;
 }
 
 .advances-list {
@@ -718,13 +736,8 @@ a {
 }
 
 .client-item {
-  width: 100%;
+  width: calc((100% - 30px) / 2);
   text-align: center;
-}
-@media screen and (min-width: 480px) {
-  .client-item {
-    width: calc((100% - 30px) / 2);
-  }
 }
 @media screen and (min-width: 768px) {
   .client-item {
@@ -738,7 +751,6 @@ a {
 }
 
 .client-link {
-  width: 170px;
   height: 92px;
   border: 1px solid var(--icon-color);
   justify-content: center;
@@ -819,7 +831,7 @@ a {
   left: 0;
   top: 0;
   font-weight: var(--weight-two);
-  font-size: 18px;
+  font-size: 12px;
   line-height: 1.55;
   letter-spacing: 0.03em;
   color: var(--white-color-text);
@@ -837,6 +849,11 @@ a {
 }
 .projects-list__item:focus .projects-list__top-text {
   transform: translateY(0);
+}
+@media screen and (min-width: 480px) {
+  .projects-list__top-text {
+    font-size: 18px;
+  }
 }
 
 .projects-list__title {
@@ -898,7 +915,7 @@ a {
   padding-top: 20px;
   padding-bottom: 20px;
   padding-left: 24px;
-  padding-right: 24px;
+  padding-right: 20px;
 }
 
 .footer {
@@ -1065,7 +1082,6 @@ a {
   .footer-join {
     text-align: left;
     margin-left: 0;
-    margin-right: 93px;
     margin-top: 12px;
     margin-bottom: 0px;
   }
@@ -1129,8 +1145,8 @@ a {
   position: absolute;
   top: 10px;
   right: 10px;
-  width: 30px;
-  height: 30px;
+  width: 40px;
+  height: 40px;
   background: var(--white-color-text);
   border: 1px solid #ffffff;
   border-radius: 50%;
@@ -1252,6 +1268,7 @@ a {
 @media screen and (min-width: 1200px) {
   .footer-post {
     margin-top: 12px;
+    margin-right: 0;
   }
 }
 
@@ -1381,7 +1398,7 @@ a {
   border: 1px solid var(--bord-color);
   border-radius: 4px;
   font-weight: 400;
-  font-size: var(--regular-size);
+  font-size: 5px;
   line-height: 1.16;
   color: var(--color-text);
 }
@@ -1424,7 +1441,7 @@ a {
 .check-text {
   height: 24px;
   font-weight: 400;
-  font-size: var(--regular-size);
+  font-size: 7px;
   line-height: 1.16;
   letter-spacing: 0.03em;
   color: var(--color-text);
@@ -1455,6 +1472,11 @@ a {
 .input-check:focus + .check-text span {
   border-color: var(--accent);
 }
+@media screen and (min-width: 480px) {
+  .check-text {
+    font-size: var(--regular-size);
+  }
+}
 @media screen and (min-width: 1200px) {
   .check-text {
     font-size: var(--low-size);
@@ -1474,13 +1496,18 @@ a {
 
 .check-link {
   font-weight: 400;
-  font-size: var(--regular-size);
+  font-size: 7px;
   line-height: 1.16;
   letter-spacing: 0.03em;
   -webkit-text-decoration-line: underline;
           text-decoration-line: underline;
   color: var(--accent);
   padding-left: 3px;
+}
+@media screen and (min-width: 480px) {
+  .check-link {
+    font-size: var(--regular-size);
+  }
 }
 @media screen and (min-width: 1200px) {
   .check-link {
@@ -1529,19 +1556,11 @@ a {
 }
 
 .input-field-hidd {
-  display: flex;
   margin-bottom: 30px;
   margin-left: auto;
   margin-right: auto;
   max-width: 425px;
-  flex-direction: column;
 }
-@media screen and (min-width: 480px) {
-  .input-field-hidd {
-    flex-direction: row;
-  }
-}
-
 .batton-form {
   font-weight: 700;
   font-size: var(--king-size);
@@ -1642,6 +1661,7 @@ a {
 }
 .is-hidden .modal {
   transform: translate(-50%, -50%) scale(0.5) rotate(360deg);
+  overflow: no-scroll;
 }
 @media screen and (min-width: 480px) {
   .modal {

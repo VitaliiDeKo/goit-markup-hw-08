@@ -13,7 +13,7 @@
   left: 0;
   top: 0;
   font-weight: var(--weight-two);
-  font-size: 18px;
+  font-size: 12px;
   line-height: 1.55;
   letter-spacing: 0.03em;
   color: var(--white-color-text);
@@ -34,6 +34,9 @@
 
   .projects-list__item:focus & {
     transform: translateY(0);
+  }
+  @include mobile{
+    font-size: 18px;
   }
 }
 .projects-list__title {
@@ -95,5 +98,5 @@
   padding-top: 20px;
   padding-bottom: 20px;
   padding-left: 24px;
-  padding-right: 24px;
+  padding-right: 20px;
 }

@@ -38,11 +38,11 @@
 }
 
 .client-item {
-  width: 100%;
- text-align: center;
-  @include mobile {
-    width: calc((100% - 30px) / 2);
-  }
+  width: calc((100% - 30px) / 2);
+  text-align: center;
+  // @include mobile {
+  //   width: calc((100% - 30px) / 2);
+  // }
   @include tablet {
     width: calc((100% - 60px) / 3);
   }
@@ -52,7 +52,6 @@
 }
 
 .client-link {
-  width: 170px;
   height: 92px;
   border: 1px solid var(--icon-color);
   justify-content: center;

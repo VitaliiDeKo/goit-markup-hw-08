@@ -6,7 +6,7 @@
   border: 1px solid var(--bord-color);
   border-radius: 4px;
   font-weight: 400;
-  font-size: var(--regular-size);
+  font-size: 5px;
   line-height: 1.16;
   color: var(--color-text);
 
@@ -36,7 +36,7 @@
 .check-text {
   height: 24px;
   font-weight: 400;
-  font-size: var(--regular-size);
+  font-size: 7px;
   line-height: 1.16;
   letter-spacing: 0.03em;
   color: var(--color-text);
@@ -69,6 +69,10 @@
       border-color: var(--accent);
     }
   }
+  @include mobile{
+    font-size: var(--regular-size); 
+  }
+
   @include desktop {
     font-size: var(--low-size);
     line-height: 1.16;
@@ -88,12 +92,16 @@
 }
 .check-link {
   font-weight: 400;
-  font-size: var(--regular-size);
+  font-size: 7px;
   line-height: 1.16;
   letter-spacing: 0.03em;
   text-decoration-line: underline;
   color: var(--accent);
   padding-left: 3px;
+  @include mobile{
+    font-size: var(--regular-size);
+  }
+
   @include desktop {
     font-size: var(--low-size);
     line-height: 1.16;
@@ -140,14 +148,12 @@
 }
 
 .input-field-hidd {
-  display: flex;
   margin-bottom: 30px;
   margin-left: auto;
   margin-right: auto;
   max-width: 425px;
-  flex-direction: column;
+
   @include mobile {
-    flex-direction: row;
   }
 
 }

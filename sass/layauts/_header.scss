@@ -16,6 +16,7 @@
   display: none;
   align-items: center;
   padding-right: 0;
+  margin-left: auto;
   & .list-adress__item:not(:last-child) {
     margin-right: 30px;
   }
@@ -41,7 +42,6 @@
 .header-list {
   display: none;
   align-items: center;
-  padding-right: 318px;
 
   & .header-list__item:not(:last-child) {
     margin-right: 50px;
@@ -76,7 +76,7 @@
     height: 4px;
     background: var(--accent);
     border-radius: 2px;
-    top: 76px;
+    top: 77px;
     left: 0;
     background-size: contain;
     transform: translateY();

@@ -29,6 +29,11 @@
   color: var(--color-h);
   margin-bottom: 10px;
   margin-top: 0;
+  text-align: center;
+
+  @include tablet{
+    text-align: left;
+  }
 }
 
 .advances-text {
@@ -36,7 +41,6 @@
   line-height: 1.71;
   letter-spacing: 0.03em;
   color: var(--color-text);
-  max-width: 270px;
 }
 
 .advances-list {
