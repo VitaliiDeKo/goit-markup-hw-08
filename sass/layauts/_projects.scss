@@ -28,11 +28,11 @@
   transition-duration: 250ms;
   transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 
-  .projects-list__item:hover & {
+  .projects-list__link:hover & {
     transform: translateY(0);
   }
 
-  .projects-list__item:focus & {
+  .projects-list__link:focus & {
     transform: translateY(0);
   }
   @include mobile{
@@ -67,21 +67,23 @@
 }
 
 .projects-list__link {
-  display: block;
-}
-
-.projects-list__item {
-  display: block;
-
-  transition-property: box-shadow;
-  transition-duration: 250ms;
-  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
-
+  display: flex;
+  flex-direction: column;
+  height: 100%;
   &:hover,
   &:focus {
     box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.12), 0px 4px 4px rgba(0, 0, 0, 0.06),
       1px 4px 6px rgba(0, 0, 0, 0.16);
   }
+  transition-property: box-shadow;
+  transition-duration: 250ms;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+
+}
+
+.projects-list__item {
+  display: block;
+
   @include tablet {
     width: calc((100% - 30px) / 2);
   }
@@ -98,5 +100,6 @@
   padding-top: 20px;
   padding-bottom: 20px;
   padding-left: 24px;
-  padding-right: 20px;
+  padding-right: 24px;
+  flex-grow: 1;
 }

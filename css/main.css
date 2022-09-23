@@ -844,10 +844,10 @@ a {
   transition-duration: 250ms;
   transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 }
-.projects-list__item:hover .projects-list__top-text {
+.projects-list__link:hover .projects-list__top-text {
   transform: translateY(0);
 }
-.projects-list__item:focus .projects-list__top-text {
+.projects-list__link:focus .projects-list__top-text {
   transform: translateY(0);
 }
 @media screen and (min-width: 480px) {
@@ -884,17 +884,19 @@ a {
 }
 
 .projects-list__link {
-  display: block;
-}
-
-.projects-list__item {
-  display: block;
+  display: flex;
+  flex-direction: column;
+  height: 100%;
   transition-property: box-shadow;
   transition-duration: 250ms;
   transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 }
-.projects-list__item:hover, .projects-list__item:focus {
+.projects-list__link:hover, .projects-list__link:focus {
   box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.12), 0px 4px 4px rgba(0, 0, 0, 0.06), 1px 4px 6px rgba(0, 0, 0, 0.16);
+}
+
+.projects-list__item {
+  display: block;
 }
 @media screen and (min-width: 768px) {
   .projects-list__item {
@@ -915,7 +917,8 @@ a {
   padding-top: 20px;
   padding-bottom: 20px;
   padding-left: 24px;
-  padding-right: 20px;
+  padding-right: 24px;
+  flex-grow: 1;
 }
 
 .footer {
