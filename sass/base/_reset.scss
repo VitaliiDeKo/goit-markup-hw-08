@@ -31,15 +31,16 @@ body {
   margin: 0;
   font-family: 'Roboto', sans-serif;
   color: var(--color-h);
-  body.modal-open {
+  & modal-open {
     height: 100vh;
     overflow-y: hidden;
-    &.modal-open {
-      height: 100vh;
-      overflow: hidden;
-    }
   }
-}
+  & modal-open {
+    height: 100vh;
+    overflow: hidden;
+  }
+  }
+
 body.modal-open {
   height: 100vh;
   overflow: hidden;
@@ -53,11 +54,11 @@ img {
 a {
   text-decoration: none;
 }
-/*Прибрав підкреслювання з посилань*/
+
 .link {
   text-decoration: none;
 }
 .centered {
   text-align: center;
 }
-// .no-scroll {overflow:hidden} 
+.no-scroll {overflow:hidden} 

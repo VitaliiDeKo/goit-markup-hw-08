@@ -46,8 +46,7 @@
   transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
   &:hover,
   &:focus {
-    background-color: var(--white-color-text);
-    color: #188ce8;
+    background-color: #188ce8;
   }
 }
 
@@ -57,10 +56,10 @@
   // right: 28px;
   // transform: translateY(-40%);
   fill: var(--white-color-text);
-  .footer-btn:hover &,
-  .footer-btn:focus & {
-    fill: var(--accent);
-  }
+  // .footer-btn:hover &,
+  // .footer-btn:focus & {
+  //   fill: var(--accent);
+  // }
 }
 
 .footer-text-form {

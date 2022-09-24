@@ -17,8 +17,8 @@
 
   &:hover,
   &:focus {
-    background-color: var(--white-color-text);
-    color: #188ce8;
+    background-color: #188ce8;
+
   }
   @include desktop {
     padding: 10px 32px;

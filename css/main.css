@@ -33,11 +33,11 @@ body {
   font-family: "Roboto", sans-serif;
   color: var(--color-h);
 }
-body body.modal-open {
+body modal-open {
   height: 100vh;
   overflow-y: hidden;
 }
-body body.modal-open.modal-open {
+body modal-open {
   height: 100vh;
   overflow: hidden;
 }
@@ -58,13 +58,16 @@ a {
   text-decoration: none;
 }
 
-/*Прибрав підкреслювання з посилань*/
 .link {
   text-decoration: none;
 }
 
 .centered {
   text-align: center;
+}
+
+.no-scroll {
+  overflow: hidden;
 }
 
 :root {
@@ -160,15 +163,8 @@ a {
 @media screen and (min-width: 768px) {
   .header-list {
     display: flex;
-    padding-right: 80px;
   }
 }
-@media screen and (min-width: 1200px) {
-  .header-list {
-    padding-right: 318px;
-  }
-}
-
 .header-list__link,
 .header-list__link-blue {
   padding-top: 32px;
@@ -811,7 +807,6 @@ a {
 }
 
 .but-projects__item {
-  background-color: var(--second-bgc);
   display: inline-block;
 }
 
@@ -836,8 +831,8 @@ a {
   letter-spacing: 0.03em;
   color: var(--white-color-text);
   background: rgba(33, 150, 243, 0.9);
-  padding-left: 63px;
-  padding-right: 63px;
+  padding-left: 24px;
+  padding-right: 24px;
   align-items: center;
   transform: translateY(100%);
   transition-property: transform;
@@ -1313,15 +1308,11 @@ a {
   transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 }
 .footer-btn:hover, .footer-btn:focus {
-  background-color: var(--white-color-text);
-  color: #188ce8;
+  background-color: #188ce8;
 }
 
 .fut-input-icon {
   fill: var(--white-color-text);
-}
-.footer-btn:hover .fut-input-icon, .footer-btn:focus .fut-input-icon {
-  fill: var(--accent);
 }
 
 .footer-text-form {
@@ -1401,7 +1392,7 @@ a {
   border: 1px solid var(--bord-color);
   border-radius: 4px;
   font-weight: 400;
-  font-size: 5px;
+  font-size: 12px;
   line-height: 1.16;
   color: var(--color-text);
 }
@@ -1584,8 +1575,7 @@ a {
   transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 }
 .batton-form:hover, .batton-form:focus {
-  color: #188ce8;
-  background-color: var(--white-color-text);
+  background-color: #188ce8;
 }
 
 .btn {
@@ -1605,8 +1595,7 @@ a {
   transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 }
 .btn:hover, .btn:focus {
-  background-color: var(--white-color-text);
-  color: #188ce8;
+  background-color: #188ce8;
 }
 @media screen and (min-width: 1200px) {
   .btn {

@@ -6,7 +6,7 @@
   border: 1px solid var(--bord-color);
   border-radius: 4px;
   font-weight: 400;
-  font-size: 5px;
+  font-size: 12px;
   line-height: 1.16;
   color: var(--color-text);
 
@@ -179,7 +179,6 @@
   transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
   &:hover,
   &:focus {
-    color: #188ce8;
-    background-color: var(--white-color-text);
+    background-color: #188ce8;
   }
 }

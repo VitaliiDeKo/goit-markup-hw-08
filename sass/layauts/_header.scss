@@ -48,10 +48,10 @@
   }
   @include tablet {
     display: flex;
-    padding-right: 80px;
+    // padding-right: 80px;
   }
   @include desktop {
-    padding-right: 318px;
+    // padding-right: 318px;
   }
 }
 
