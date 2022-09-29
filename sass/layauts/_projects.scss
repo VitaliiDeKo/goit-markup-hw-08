@@ -21,8 +21,9 @@
   padding-left: 24px;
   padding-right: 24px;
   align-items: center;
+  overflow-y: scroll;
   
-  transform: translateY(100%);
+  transform: translateY(101%);
 
   transition-property: transform;
   transition-duration: 250ms;
@@ -64,6 +65,9 @@
   flex-wrap: wrap;
   gap: 30px;
   justify-content: center;
+  @include tablet{
+    justify-content: flex-start;
+  }
 }
 
 .projects-list__link {
@@ -93,13 +97,13 @@
 }
 
 .projects-list__borders {
-  display: block;
-  border-bottom: 1px solid #eeeeee;
-  border-left: 1px solid #eeeeee;
-  border-right: 1px solid #eeeeee;
-  padding-top: 20px;
-  padding-bottom: 20px;
-  padding-left: 24px;
-  padding-right: 24px;
+  // display: block;
+  border: 1px solid #eeeeee;
+  border-top: 0;
+  // border-right: 1px solid #eeeeee;
+  padding: 20px 24px;
+  // padding-bottom: 20px;
+  // padding-left: 24px;
+  // padding-right: 24px;
   flex-grow: 1;
 }

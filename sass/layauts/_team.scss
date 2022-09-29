@@ -79,7 +79,7 @@
   align-items: center;
   justify-content: center;
 
-  transition-property: background-color, color, box-shadow, fill;
+  transition-property: background-color;
   transition-duration: 250ms;
   transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 
@@ -99,7 +99,7 @@
 .team-soc-icon {
   fill: var(--icon-color);
 
-  transition-property: background-color, color, box-shadow, fill;
+  transition-property: fill;
   transition-duration: 250ms;
   transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 

@@ -7,6 +7,9 @@
   height: 100%;
   z-index: 1;
 
+  transition-duration: 250ms;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+
   @include tablet {
     display: none;
   }
@@ -19,8 +22,9 @@
   min-height: 100%;
   position: relative;
   max-width: 480px;
-  padding-left: 40px;
-  padding-right: 15px;
+  // padding-left: 40px;
+  // padding-right: 15px;
+  padding: 48px 40px;
   
 }
 
@@ -54,17 +58,29 @@
   }
 }
 .mobile-menu__list-nav {
-  margin-top: 38px;
-  margin-bottom: 302px;
-}
-// .mobile-menu__item-nav {
+//   // margin-top: 38px;
+margin-bottom: 64px;
+//   @include mobile{
+//   //   margin-bottom: 302px;
+//   // }
 // }
+// .mobile-menu__item-nav {
+}
 .mobile-menu__link-nav {
   font-weight: 500;
   font-size: 40px;
   line-height: 1.17;
   letter-spacing: 0.02em;
   color: #212121;
+
+  transition-property: color;
+  transition-duration: 250ms;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+
+  &:hover,
+  &:focus {
+    color: var(--accent);
+  }
 }
 .mobile-menu__link-nav-blue {
   font-weight: 500;
@@ -83,10 +99,14 @@
 }
 .mobile-menu__link-connect-blue {
   font-weight: 500;
-  font-size: 34px;
+  font-size: 25px;
   line-height: 40px;
   letter-spacing: 0.02em;
   color: #2196f3;
+
+  @include mobile{
+    font-size: 34px;
+  }
 }
 .mobile-menu__link-connect {
   font-weight: 500;
@@ -94,6 +114,15 @@
   line-height: 1.16;
   letter-spacing: 0.02em;
   color: #757575;
+
+  transition-property: color;
+  transition-duration: 250ms;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+
+  &:hover,
+  &:focus {
+    color: var(--accent);
+  }
 }
 .mobile-menu__list-soc {
   display: flex;
@@ -109,7 +138,7 @@
 .mobile-menu__link-soc {
   position: relative;
   font-weight: 500;
-  font-size: 18px;
+  font-size: 11px;
   line-height: 1.22;
   letter-spacing: 0.02em;
   color: #2196f3;
@@ -125,13 +154,19 @@
     border: 1px solid rgba(33, 33, 33, 0.2);
     transform: rotate(90deg);
   }
+  @include mobile{
+    font-size: 18px;
+  }
 }
 .mobile-menu__link-soc-end {
   font-weight: 500;
-  font-size: 18px;
+  font-size: 11px;
   line-height: 1.22;
   letter-spacing: 0.02em;
   color: #2196f3;
+  @include mobile{
+    font-size: 18px;
+  }
 }
 .marg-x {
   margin-bottom: 35.71px;
