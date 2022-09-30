@@ -138,7 +138,7 @@ margin-bottom: 64px;
 .mobile-menu__link-soc {
   position: relative;
   font-weight: 500;
-  font-size: 11px;
+  font-size: 18px;
   line-height: 1.22;
   letter-spacing: 0.02em;
   color: #2196f3;
@@ -154,19 +154,19 @@ margin-bottom: 64px;
     border: 1px solid rgba(33, 33, 33, 0.2);
     transform: rotate(90deg);
   }
-  @include mobile{
-    font-size: 18px;
-  }
+  // @include mobile{
+  //   font-size: 18px;
+  // }
 }
 .mobile-menu__link-soc-end {
   font-weight: 500;
-  font-size: 11px;
+  font-size: 18px;
   line-height: 1.22;
   letter-spacing: 0.02em;
   color: #2196f3;
-  @include mobile{
-    font-size: 18px;
-  }
+  // @include mobile{
+  //   font-size: 18px;
+  // }
 }
 .marg-x {
   margin-bottom: 35.71px;

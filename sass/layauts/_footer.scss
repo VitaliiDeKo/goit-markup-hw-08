@@ -11,12 +11,14 @@
     flex-wrap: wrap;
   }
   @include desktop{
-    align-items: flex-start;
+    // align-items: flex-start;
+    align-items: baseline;
+    justify-content: space-between;
   }
 }
 
 .footer-logo-address {
-  width: 231px;
+  // width: 231px;
   margin-bottom: 60px;
   text-align: center;
   margin-left: auto;
@@ -61,7 +63,7 @@
 .footer-item {
   display: block;
   .footer-list &:not(:last-child) {
-    padding-bottom: 9px;
+    margin-bottom: 9px;
   }
 }
 
@@ -128,6 +130,7 @@
 .footer-soc-list {
   display: flex;
   gap: 10px;
+  justify-content: center;
 }
 
 .footer-link-soc {
@@ -176,12 +179,13 @@
 .footer-join {
   margin-bottom: 60px;
   text-align: center;
-  width: 206px;
+  // width: 206px;
   margin-left: auto;
   margin-right: auto;
   @include desktop {
     text-align: left;
     margin-left: 0;
+    margin-right: auto;
     // margin-top: 12px;
     margin-bottom: 0px;
   }

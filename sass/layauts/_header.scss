@@ -25,12 +25,14 @@
     display: block;
     & .list-adress__item:not(:last-child) {
       margin-right: 0px;
+      margin-bottom: 10px;
     }
   }
   @include desktop {
     display: flex;
     & .list-adress__item:not(:last-child) {
       margin-right: 30px;
+      margin-bottom: 0;
     }
   }
 }
@@ -81,6 +83,7 @@
     left: 0;
     background-size: contain;
     transform: translateY();
+   
   }
 }
 
@@ -203,13 +206,13 @@
   }
 }
 
-.list-adress__item{
-  margin-bottom: 10px;
+// .list-adress__item {
+//   // margin-bottom: 10px;
 
-  @include desktop {
-    margin-bottom: 0;
-  }
-}
+//   @include desktop {
+//     margin-bottom: 0;
+//   }
+// }
 
 .list-adress__link-mail {
   display: flex;
